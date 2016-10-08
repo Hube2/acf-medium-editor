@@ -6,7 +6,7 @@ Suported ACF Versions
 Ever needed to give a client a way to edit the appearence of text without wanting to give them a full blown
 WYSIWYG editor? Need something less than a WYSYWIG but more than a text or textarea field?
 
-![Example](https://github.com/Hube2/acf-medium-editor-field/blob/master/assets/screenshots/example.png)
+![Example](https://github.com/Hube2/acf-medium-editor/blob/master/assets/screenshots/example.png)
 
 == Installation ==
 
@@ -38,7 +38,7 @@ repo and I'll consider them.
 
 ## Field Settings
 See Setting Descriptions Below Screenshot
-![Field Settings](https://github.com/Hube2/acf-medium-editor-field/blob/master/assets/screenshots/field-settings.png)
+![Field Settings](https://github.com/Hube2/acf-medium-editor/blob/master/assets/screenshots/field-settings.png)
 
 The following is an explanation of the fields, not including the ones that whould be self explanatory.
 
