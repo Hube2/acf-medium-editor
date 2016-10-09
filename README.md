@@ -35,6 +35,12 @@ custom buttons that will allow me to complete the admin to meet the client's nee
 like text color of specific portions of text. I'm not apposed to adding more options and features of 
 MediumEditor, drop me a note in issues for this repo and I'll consider them.
 
+There are actually several ACF addons that use MediumEditor, but I needed something that I could congifure
+differently for each instance and I especially needed to be able to easily add custom buttons and the 
+easiest way to do that was with MediumButton. I couldn't find one and honestly, editing any of the existing
+ones to allow what I needed would have mean completely rebuilding them anyway. So this is my take on it. 
+Hopefully others find it usefull.
+
 
 ## Field Settings
 See Setting Descriptions Below Screenshot
