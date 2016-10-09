@@ -178,3 +178,14 @@ Theme names in the above code is one of the following themes currently supported
 For more information see [MediumEditor](https://github.com/yabwe/medium-editor#mediumeditor) and
 [MediumButton](https://github.com/arcs-/MediumButton#mediumbutton)
 
+#### Automatic Updates
+Install [GitHub Updater](https://github.com/afragen/github-updater) on your site if you want to recieve automatic
+updates for this plugin.
+
+#### Remove Nag
+You may notice that I've started adding a little nag to my plugins. It's just a box on some pages that lists my
+plugins that you're using with a request do consider making a donation for using them. If you want to disable them
+add the following filter to your functions.php file.
+```
+add_filter('remove_hube2_nag', '__return_true');
+```

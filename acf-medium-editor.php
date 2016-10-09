@@ -4,7 +4,7 @@
 		Plugin Name: Advanced Custom Fields: Medium Editor Field
 		Plugin URI: 
 		Description: Medium Editor Field for ACF 5 Pro
-		Version: 0.0.1
+		Version: 0.0.2
 		Author: John A. Huebner II
 		Author URI: 
 		
@@ -104,6 +104,9 @@
 	endif;
 	
 	if (!function_exists('jh_plugins_list_meta_box')) {
+		if (apply_filters('remove_hube2_nag', false)) {
+			return;
+		}
 		function jh_plugins_list_meta_box() {
 			$plugins = apply_filters('jh_plugins_list', array());
 				
