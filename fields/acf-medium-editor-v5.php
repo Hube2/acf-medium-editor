@@ -354,7 +354,7 @@
 				
 				// add removeFormat button?
 				if ($removeFormat) {
-					$buttons[] = 'removeFormat';
+					$buttons['removeFormat'] = 'removeFormat';
 				}
 				
 				$buttons = apply_filters('acf/medium-editor-field/buttons', $buttons, $field);
