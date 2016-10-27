@@ -572,15 +572,12 @@
 			*  @return	$value
 			*/
 			
-			/*
 			
 			function load_value($value, $post_id, $field) {
 				
 				return $value;
 				
 			}
-			
-			*/
 			
 			
 			/*
@@ -598,15 +595,11 @@
 			*  @return	$value
 			*/
 			
-			/*
 			
 			function update_value($value, $post_id, $field) {
 				
-				return $value;
-				
+				return $value;				
 			}
-			
-			*/
 			
 			
 			/*
