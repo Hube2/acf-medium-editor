@@ -39,7 +39,26 @@ var acf_medium_editors = {};
 				$selector = '[data-id="'+$id+'"] '+$selector;
 			}
 		}
+		
+		/* hack to deal with MediumButton not updating textarea properly */
+		var $targetObj;
+		$($selector).each(function(index, element) {
+			$targetObj = element;
+		});;
+		//console.log($targetObj);
 		var editor = new MediumEditor($selector, $object);
+		//console.log(editor.elements[0]);
+		var editorId = editor.elements[0].id;
+		//console.log(editorId);
+		var $target = document.getElementById(editorId);
+		//console.log($target.getAttribute('medium-editor-index'));
+		$('#'+editorId).bind('DOMSubtreeModified', function(e) {
+			//$target = $(editorId);
+			editor.events.updateInput($target, $targetObj);
+		});
+		/* end of hack */
+		
+		// cause update to editor to trigger acf change event
 		editor.subscribe('editableInput', function(e, editable) {
 			$($selector).trigger('change');
 		});
