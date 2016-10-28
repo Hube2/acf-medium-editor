@@ -54,7 +54,10 @@ var acf_medium_editors = {};
 		//console.log($target.getAttribute('medium-editor-index'));
 		$('#'+editorId).bind('DOMSubtreeModified', function(e) {
 			//$target = $(editorId);
+			//$targetObj.innerHTML = $target.innerHTML;
 			editor.events.updateInput($target, $targetObj);
+			//console.log($target.innerHTML);
+			//console.log($targetObj.innerHTML);
 		});
 		/* end of hack */
 		

@@ -597,7 +597,17 @@
 			
 			
 			function update_value($value, $post_id, $field) {
-				
+				// clean up empty html tags
+				$value = preg_replace('#<(\w+)\s*[^>]*>\s*(<br\s*/?>)?\s*</\1>#s', '', $value);
+				$value = preg_replace('#(^<br\s*/?>|<br\s*/?>$)#s', '', $value);
+				if (isset($field['other_options'])) {
+					if (in_array('disableReturn', $field['other_options'])) {
+						// no return, remove all p and br tags
+						$value = preg_replace('#(</?p>|<br\s*/?>)#is', ' ', $value);
+						// remove extra spaces that may have been added above
+						$value = trim(preg_replace('/\s+/s', ' ', $value));
+					}
+				}
 				return $value;				
 			}
 			
