@@ -30,5 +30,8 @@ This ACF field type is compatible with:
 
 == Changelog ==
 
+= 0.0.6 =
+* correcting bugs
+
 = 0.0.1 =
 * initial release
