@@ -178,6 +178,73 @@ Theme names in the above code is one of the following themes currently supported
 For more information see [MediumEditor](https://github.com/yabwe/medium-editor#mediumeditor) and
 [MediumButton](https://github.com/arcs-/MediumButton#mediumbutton)
 
+## Filters
+
+### Add Custom Buttons in Code
+
+This filter is applied to the custom buttons after before they are validated as having all the correct
+requirements that are given when creating a custom button in the field settings for a Medium Editor Field.
+
+**Hooks**
+
+1. **acf/medium-editor-field/custom-buttons** - filter for every field 
+2. **acf/medium-editor-field/custom-buttons/name={$field_name}** - filter for specific field based on it's name
+3. **acf/medium-editor-field/custom-buttons/key={$field_key}** - filter for specific field based on it's key
+
+**Parameters**
+
+1. **$buttons** - an array of button options
+2. **$field** - an array containing all the fields settings for the field being loaded
+
+```
+// functions.php
+
+function my_custom_buttons($buttons, $field) {
+  $buttons[] = array(
+    'name' => 'red',
+    'label' => '<b style="color: #F00;">Red</b>"',
+    'attributes' => array(
+      'name' => 'style',
+      'value' => 'color: #F00;'
+    )
+  );
+  return $buttons;
+}
+add_filter('acf/medium-editor-field/custom-buttons', 'my_custom_buttons', 10, 2);
+```
+
+## Filter Buttons
+
+This filter is applied to the list of buttons that will be shown. This list will contain the "name"
+of each standard button as well as the "name" of each custom button that has been set up for the field.
+Please note that only valid button names can be used here. See medium editor's list of available
+buttons.
+
+**Hooks**
+
+1. **acf/medium-editor-field/buttons** - filter for every field 
+2. **acf/medium-editor-field/buttons/name={$field_name}** - filter for specific field based on it's name
+3. **acf/medium-editor-field/buttons/key={$field_key}** - filter for specific field based on it's key
+
+**Parameters**
+
+1. **$buttons** - an array of button options
+2. **$field** - an array containing all the fields settings for the field being loaded
+
+```
+// functions.php
+
+function my_custom_buttons($buttons, $field) {
+  // add underline button to all medium editor fields
+  // set both the index and the value of the array element
+  if (!isset($buttons['underline'])) {
+    $buttons['underline'] = 'underline';
+  }
+  return $buttons;
+}
+add_filter('acf/medium-editor-field/buttons', 'my_buttons', 10, 2);
+```
+
 #### Automatic Updates
 Install [GitHub Updater](https://github.com/afragen/github-updater) on your site if you want to recieve automatic
 updates for this plugin.
