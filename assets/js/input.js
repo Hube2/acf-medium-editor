@@ -39,32 +39,53 @@ var acf_medium_editors = {};
 				$selector = '[data-id="'+$id+'"] '+$selector;
 			}
 		}
-		
-		/* hack to deal with MediumButton not updating textarea properly */
-		var $targetObj;
-		$($selector).each(function(index, element) {
-			$targetObj = element;
-		});;
-		//console.log($targetObj);
 		var editor = new MediumEditor($selector, $object);
-		//console.log(editor.elements[0]);
-		var editorId = editor.elements[0].id;
-		//console.log(editorId);
-		var $target = document.getElementById(editorId);
-		//console.log($target.getAttribute('medium-editor-index'));
-		$('#'+editorId).bind('DOMSubtreeModified', function(e) {
-			//$target = $(editorId);
-			//$targetObj.innerHTML = $target.innerHTML;
-			editor.events.updateInput($target, $targetObj);
-			//console.log($target.innerHTML);
-			//console.log($targetObj.innerHTML);
-		});
-		/* end of hack */
 		
 		// cause update to editor to trigger acf change event
 		editor.subscribe('editableInput', function(e, editable) {
 			$($selector).trigger('change');
 		});
+		
+		/* hack to deal with MediumButton not updating textarea properly */
+		/*
+		var $targetObj;
+		$($selector).each(function(index, element) {
+			$targetObj = element;
+		});;
+		*/
+		//console.log($targetObj);
+		
+		//console.log(editor.elements[0]);
+		//console.log(editor.elements);
+		if (!editor.elements.length) {
+			// not a new editor
+			// happens when the editor is for a cloned field
+			return;
+		}
+		var elements = editor.elements;
+		//console.log(elements);
+		for (i=0; i<editor.elements.length; i++) {
+			//console.log(elements[i].id);
+			var editorId = elements[i].id;
+			//console.log(editorId);
+			//var $target = document.getElementById(editorId);
+			//console.log($target.getAttribute('medium-editor-index'));
+			$('#'+editorId).bind('DOMSubtreeModified', function(e) {
+				//console.log(e.currentTarget.id);
+				var $target = document.getElementById(e.currentTarget.id);
+				var $targetObj
+				$('textarea[medium-editor-textarea-id="'+e.currentTarget.id+'"]').each(function(index, element) {
+					//console.log(element);
+					$targetObj = document.getElementById(element.id);
+				});
+				//console.log($targetObj);
+				//$targetObj.innerHTML = $target.innerHTML;
+				editor.events.updateInput($target, $targetObj);
+				//console.log($target.innerHTML);
+				//console.log($targetObj.innerHTML);
+			});
+		}
+		/* end of hack */
 	}
 	if(typeof acf.add_action !== 'undefined') {
 		acf.add_action('ready append', function( $el ){

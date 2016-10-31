@@ -30,6 +30,9 @@ This ACF field type is compatible with:
 
 == Changelog ==
 
+= 0.0.7 =
+* corrected bug when in clone field
+
 = 0.0.6 =
 * correcting bugs
 
