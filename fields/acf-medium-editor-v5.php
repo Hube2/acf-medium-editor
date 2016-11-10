@@ -277,6 +277,8 @@
 			}
 			
 			function render_field($field) {
+				
+				//echo '<pre>'; print_r($field); echo '</pre>';
 				// vars
 				$atts = array();
 				$o = array('id', 'class', 'name', 'placeholder');
@@ -663,30 +665,19 @@
 			*  @return	$valid
 			*/
 			
-			/*
 			
 			function validate_value($valid, $value, $field, $input){
 				
-				// Basic usage
-				if ($value < $field['custom_minimum_setting'])
-				{
-					$valid = false;
+				if ($field['required']) {
+					$value = trim(preg_replace('#</?\w+[^>]*>#', '', $value));
+					if ($value == '') {
+						$valid = $field['label'].' is required';
+					}
 				}
-				
-				
-				// Advanced usage
-				if ($value < $field['custom_minimum_setting'])
-				{
-					$valid = __('The value is too little!','acf-medium-editor'),
-				}
-				
-				
 				// return
 				return $valid;
 				
 			}
-			
-			*/
 			
 			
 			/*
