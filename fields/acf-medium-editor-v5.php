@@ -405,7 +405,7 @@
 				wp_register_script('medium-editor', $url.'assets/vendor/medium-editor/js/medium-editor'.$min.'.js', array(), $version);
 				wp_enqueue_script('medium-editor');
 				
-				wp_register_script('medium-button', $url.'assets/vendor/medium-button/src/MediumButton.js', array('medium-editor'), $version);
+				wp_register_script('medium-button', $url.'assets/vendor/medium-button/src/MediumButton'.$min.'.js', array('medium-editor'), $version);
 				wp_enqueue_script('medium-button');
 				
 				wp_register_style('medium-editor', $url.'assets/vendor/medium-editor/css/medium-editor'.$min.'.css', array(), $version);

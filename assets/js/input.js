@@ -152,6 +152,10 @@ var acf_medium_editor_timeout = false;
 			$($selector).trigger('change');
 		});
 		
+		/* test removing the hack */
+		if (1) {return;}
+		alert ('here');
+		
 		var elements = editor.elements;
 		//console.log(elements);
 		for (i=0; i<editor.elements.length; i++) {
