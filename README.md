@@ -4,8 +4,8 @@ Suported ACF Versions
 * ACF 5
 
 Ever needed to give a client a way to edit the appearence of text without wanting to give them a full blown
-WYSIWYG editor? Need something less than a WYSYWIG but more than a text or textarea field that you can configure
-the way you need it to work with the features you need it to have?
+WYSIWYG editor? Need something less than a WYSYWIG but more than a text or textarea field that you can
+configure the way you need it to work with the features you need it to have?
 
 ![Example](https://github.com/Hube2/acf-medium-editor/blob/master/assets/screenshots/example.png)
 
@@ -18,16 +18,16 @@ the way you need it to work with the features you need it to have?
 
 ##Configurable Medium Editor WYSIWYG Field for ACF
 
-This add on for ACF5 Pro adds [MediumEditor](https://github.com/yabwe/medium-editor) as an ACF field. Each field
-instance is configurable, and each field instance has its own settings. Many of the options 
+This add on for ACF5 adds [MediumEditor](https://github.com/yabwe/medium-editor) as an ACF field. 
+Each field instance is configurable, and each field instance has its own settings. Many of the options 
 available in MediumEditor are supported, including the creation of custom buttons using [MediumButton](https://github.com/arcs-/MediumButton). It is also possible using either a configuration
 setting or a filter to alter the MediumEditor Theme. Some of the available options are covered below.
 For more information on MediumEditor and MediumButton, see the description of these libaries at the links above.
 
-Please note that this is onlly available for the ACF5 Pro verion. It will not work in ACF4. As you'll see looking at
-the field settings, I've added a repeater field (and a nested repeater to the settings for this field type.
-It may work with ACF4 and with the repeater add on, but the JavaScript would need to be rewritten for that 
-and if you're using ACF4 and the repeater add on then you may as will upgrade to ACF5 Pro.
+Please note that this is only available for the ACF5 verion. It will not work in ACF4. As you'll see 
+looking at the field settings, I've added a repeater field (and a nested repeater to the settings for 
+this field type. It may work with ACF4 and with the repeater add on, but the JavaScript would need to be 
+rewritten for that and if you're using ACF4 and the repeater add on then you may as will upgrade to ACF5.
 
 I have created this custom field with specific features of MediumEditor that I need for a project I'm
 currently working on. The most important feature is the inclusion of MediumButton so that I can create
@@ -51,17 +51,20 @@ The following is an explanation of the fields, not including the ones that shoul
 **Buttons:** These are the buttons that are included in [MediumEditor](https://github.com/yabwe/medium-editor#buttons).
 Select the buttons you want to include in each editor instance.
 
-**Custom Buttons:** This is the main reason that I created this plugin. This field supports adding custom buttons
-using [MediumButton](https://github.com/arcs-/MediumButton#html-buttons). Please note that if any of the main fields
-(Name, Label, HTML Tag) are empty that the entire button will be ignored.
+**Custom Buttons:** This is the main reason that I created this plugin. This field supports adding 
+custom buttons using [MediumButton](https://github.com/arcs-/MediumButton#html-buttons). 
+Please note that if any of the main fields (Name, Label, HTML Tag) are empty that the entire 
+button will be ignored.
 
-*Name*: This is then name of the button and will be used when instaniating the MediumButton Object. The button
-name must be unique and cannot be one of the buttons already included in MediumEditor.
-I do not know what the effects of custom characters in the name will be. Please report any bugs and I will
-look into adding something to clean up characters or find some other work-around for any that cause errors.
+*Name*: This is then name of the button and will be used when instaniating the MediumButton Object. 
+The button name must be unique and cannot be one of the buttons already included in MediumEditor, a
+button of the same name as on of the standard button in Medium Editor will not override that button
+if it is also included. I do not know what the effects of custom characters in the name will be. 
+Please report any bugs and I will look into adding something to clean up characters or find some other work-around for any that cause errors.
 
-*Label*: This is the label that will appear in the button bar. This field allows HTML. Please make sure it is valid
-HTML, invalid markup will probably break the button bar. MediumButton also supports using icons for buttons.
+*Label*: This is the label that will appear in the button bar. This field allows HTML. 
+Please make sure it is valid html (I do not validate the html you enter). Invalid markup will probably 
+break the button bar or the entire admin. MediumButton also supports using icons for buttons.
 If you want to use icons in your buttons then it is your responsibility to make sure the icon font set is
 available for use in the admin of your site.
 
@@ -72,74 +75,18 @@ I'm not sure at this time what effect some of the tags will have in the editor. 
 if you run into issues let me know and I'll need to make a decision on wheter to try to fix it or remove
 the tag(s) from the allowed list.
 
-The supported tags are:
+The currently supported tags are: abbr, acronym, address, article, asside, b, 
+bdi, bdo, blockquote, button, caption, cite, code, dd, del, details, dfn, 
+div, dl, dt, em, figcaption, figure, footer, h1, h2, h3, h4, h5, h6, header, 
+i, ins, li, main, mark, meta, ol, p, pre, q, s, samp, section, small, span, 
+strong, sub, sup, summary, table, tbody, td, tfoot, th, thead, time, tr, u, 
+ul, var, wbr
 
-* abbr
-* acronym
-* address
-* article
-* asside
-* b
-* bdi
-* bdo
-* blockquote
-* button
-* caption
-* cite
-* code
-* dd
-* del
-* details
-* dfn
-* div
-* dl
-* dt
-* em
-* figcaption
-* figure
-* footer
-* h1
-* h2
-* h3
-* h4
-* h5
-* h6
-* header
-* i
-* ins
-* li
-* main
-* mark
-* meta
-* ol
-* p
-* pre
-* q
-* s
-* samp
-* section
-* small
-* span
-* strong
-* sub
-* sup
-* summary
-* table
-* tbody
-* td
-* tfoot
-* th
-* thead
-* time
-* tr
-* u
-* ul
-* var
-* wbr
-
-*Attributes*: Add attributes to the html tag. Attibute names must be valid (they must beging with a letter and
+*Attributes*: Add attributes to the html tag. Attibute names must be valid (they must begin with a letter and
 contain only letter, numbers, underscores and dashes. Attribute values must not contain double quotes (")
-any attributes that do not conform to these rules will be ignored.
+any attributes that do not conform to these rules will be ignored. Please note that beyond this, attribute
+names and values are not validated. I do not know what effect invalid entries will have on your admin.
+Like other values, if you find something that causes an issue, open one and I'll see what needs to be done.
 
 **Other MediumEditor Options:** This is a selection of other
 [Core Options](https://github.com/yabwe/medium-editor#core-options) available for MediumEditor. Please see
@@ -148,12 +95,13 @@ value to true.
 
 ## MediumEditor Themes
 MediumEditor fields will use the default theme unless you change it. You can alter the theme used for all 
-MediumEditor fields in two ways.
+MediumEditor fields, this is not something that you can apply only some fields. You can change the theme
+on your site in one of two ways:
 
 1) wp-config.php
 Add the following code to your wp-cofig.php file
 ```
-define('MEDIUM_EDITOR_THEME', 'theme-name');
+define('MEDIUM_EDITOR_THEME', 'beagle');
 ```
 
 2) filter
@@ -167,13 +115,7 @@ function my_medium_editor_theme_function($theme) {
 ```
 
 Theme names in the above code is one of the following themes currently supported by MediumEditor:
-* beagle
-* bootstrap
-* default
-* flat
-* mani
-* roman
-* tim
+beagle, bootstrap, default, flat, mani, roman, tim
 
 For more information see [MediumEditor](https://github.com/yabwe/medium-editor#mediumeditor) and
 [MediumButton](https://github.com/arcs-/MediumButton#mediumbutton)
@@ -182,7 +124,7 @@ For more information see [MediumEditor](https://github.com/yabwe/medium-editor#m
 
 ### Add Custom Buttons in Code
 
-This filter is applied to the custom buttons after before they are validated as having all the correct
+This filter is applied to the custom buttons before they are validated as having all the correct
 requirements that are given when creating a custom button in the field settings for a Medium Editor Field.
 
 **Hooks**
