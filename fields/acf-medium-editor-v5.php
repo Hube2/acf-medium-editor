@@ -388,6 +388,9 @@
 					$field['other_options'] = array($field['other_options']);
 				}
 				foreach ($this->other_options as $option) {
+					if ($option == 'allowBreakInSingleLineInput') {
+						continue;
+					}
 					if (in_array($option, $field['other_options'])) {
 						$options[$option] = true;
 					} else {

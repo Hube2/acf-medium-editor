@@ -5,7 +5,7 @@
 		Plugin URI: https://github.com/Hube2/acf-medium-editor
 		GitHub Plugin URI: https://github.com/Hube2/acf-medium-editor
 		Description: Medium Editor Field for ACF 5 Pro
-		Version: 1.2.0
+		Version: 1.2.1
 		Author: John A. Huebner II
 		Author URI: https://github.com/Hube2
 		
