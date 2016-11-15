@@ -56,19 +56,19 @@ custom buttons using [MediumButton](https://github.com/arcs-/MediumButton#html-b
 Please note that if any of the main fields (Name, Label, HTML Tag) are empty that the entire 
 button will be ignored.
 
-*Name*: This is then name of the button and will be used when instaniating the MediumButton Object. 
+***Name***: This is then name of the button and will be used when instaniating the MediumButton Object. 
 The button name must be unique and cannot be one of the buttons already included in MediumEditor, a
 button of the same name as on of the standard button in Medium Editor will not override that button
 if it is also included. I do not know what the effects of custom characters in the name will be. 
 Please report any bugs and I will look into adding something to clean up characters or find some other work-around for any that cause errors.
 
-*Label*: This is the label that will appear in the button bar. This field allows HTML. 
+***Label***: This is the label that will appear in the button bar. This field allows HTML. 
 Please make sure it is valid html (I do not validate the html you enter). Invalid markup will probably 
 break the button bar or the entire admin. MediumButton also supports using icons for buttons.
 If you want to use icons in your buttons then it is your responsibility to make sure the icon font set is
 available for use in the admin of your site.
 
-*HTML Tag*: Enter the html tag that will be inserted by this button. Only non-empty html tags are allowed.
+***HTML Tag***: Enter the html tag that will be inserted by this button. Only non-empty html tags are allowed.
 Most valid HTML tags are supported. If an invalid HTML tag is entered then the button will be ignored.
 
 I'm not sure at this time what effect some of the tags will have in the editor. I haven't tried them all
@@ -82,16 +82,23 @@ i, ins, li, main, mark, meta, ol, p, pre, q, s, samp, section, small, span,
 strong, sub, sup, summary, table, tbody, td, tfoot, th, thead, time, tr, u, 
 ul, var, wbr
 
-*Attributes*: Add attributes to the html tag. Attibute names must be valid (they must begin with a letter and
-contain only letter, numbers, underscores and dashes. Attribute values must not contain double quotes (")
-any attributes that do not conform to these rules will be ignored. Please note that beyond this, attribute
-names and values are not validated. I do not know what effect invalid entries will have on your admin.
-Like other values, if you find something that causes an issue, open one and I'll see what needs to be done.
+***Attributes***: Add attributes to the html tag. Attibute names must be valid (they must 
+begin with a letter and contain only letter, numbers, underscores and dashes. Attribute 
+values must not contain double quotes (") any attributes that do not conform to these 
+rules will be ignored. Please note that beyond this, attribute names and values are not 
+validated. I do not know what effect invalid entries will have on your admin. Like other 
+values, if you find something that causes an issue, open one and I'll see what needs to be done.
 
 **Other MediumEditor Options:** This is a selection of other
-[Core Options](https://github.com/yabwe/medium-editor#core-options) available for MediumEditor. Please see
-the MediumEditor documentation for information on each option. Selecting an option will set that option's
-value to true.
+[Core Options](https://github.com/yabwe/medium-editor#core-options) available for 
+MediumEditor with the exception of ***allowBreakInSingleLineInput*** (see below). Please 
+see the MediumEditor documentation for information on each of the other options. Selecting 
+an option will set that option's value to true.
+
+***allowBreakInSingleLineInput:*** This is an option added specifically for use with WP.
+If you set disableReturn on then the medium editor acts like a single link input. Setting
+allowBreakInSingleLineInput allows editors to manually type in <br> tags into these
+single line fields.
 
 ## MediumEditor Themes
 MediumEditor fields will use the default theme unless you change it. You can alter the theme used for all 
