@@ -60,7 +60,8 @@
 				'disableExtraSpaces',
 				'disableEditing',
 				'spellcheck',
-				'targetBlank'
+				'targetBlank',
+				'allowBreakInSingleLineInput'
 			);
 			
 			private $valid_tags = array(
@@ -264,7 +265,8 @@
 						'disableExtraSpaces' => 'disableExtraSpaces',
 						'disableEditing' => 'disableEditing',
 						'spellcheck' => 'spellcheck',
-						'targetBlank' => 'targetBlank'
+						'targetBlank' => 'targetBlank',
+						'allowBreakInSingleLineInput' => 'allowBreakInSingleLineInput'
 					),
 					'layout' => 'horizontal',
 					'label'			=> __('Other Medium Editor Options', 'acf-medium-editor'),
@@ -293,7 +295,21 @@
 					if( !empty($field[ $k ]) ) $atts[ $k ] = $k;
 				}
 				$e .= '<textarea '.acf_esc_attr( $atts ).'>';
-				$e .= esc_textarea($field['value']);
+				
+				
+				$value = $field['value'];
+				if (isset($field['other_options'])) {
+					if (in_array('disableReturn', $field['other_options'])) {
+						if (in_array('allowBreakInSingleLineInput', $field['other_options'])) {
+							$value = preg_replace('#<(br[^>]*)>#is', '&amp;lt;\1&amp;gt;', $value);
+						}
+					}
+				}
+				$value = str_replace('<', '&lt;', $value);
+				$value = str_replace('>', '&gt;', $value);
+				
+				
+				$e .= $value;
 				$e .= '</textarea>';
 				
 				echo $e;
@@ -577,6 +593,7 @@
 			
 			function load_value($value, $post_id, $field) {
 				
+				
 				return $value;
 				
 			}
@@ -604,12 +621,20 @@
 				$value = preg_replace('#(^<br\s*/?>|<br\s*/?>$)#s', '', $value);
 				if (isset($field['other_options'])) {
 					if (in_array('disableReturn', $field['other_options'])) {
-						// no return, remove all p and br tags
-						$value = preg_replace('#(</?p>|<br\s*/?>)#is', ' ', $value);
+						// no return, remove all p tags
+						$value = preg_replace('#</?p[^>]*>#is', ' ', $value);
+						if (!in_array('allowBreakInSingleLineInput', $field['other_options'])) {
+							// remove all br tags
+							$value = preg_replace('#<br[^>]*>#is', ' ', $value);
+						} else {
+							$value = str_replace('&lt;', '<', $value);
+							$value = str_replace('&gt;', '>', $value);
+						}
 						// remove extra spaces that may have been added above
 						$value = trim(preg_replace('/\s+/s', ' ', $value));
 					}
 				}
+				$value = wp_kses_post($value);
 				return $value;				
 			}
 			

@@ -97,7 +97,7 @@ an option will set that option's value to true.
 
 ***allowBreakInSingleLineInput:*** This is an option added specifically for use with WP.
 If you set disableReturn on then the medium editor acts like a single link input. Setting
-allowBreakInSingleLineInput allows editors to manually type in <br> tags into these
+allowBreakInSingleLineInput allows editors to manually type in &lt;br&gt; tags into these
 single line fields.
 
 ## MediumEditor Themes
