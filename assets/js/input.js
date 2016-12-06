@@ -13,11 +13,17 @@ var acf_medium_editor_timeout = false;
 		}
 			
 		var $parent = $el.parent();
+		//console.log($parent);
+		//console.log($parent.prop('nodeName'));
 		if ($parent.hasClass('acf-clone')) {
 			return false;
 		}
 		if ($parent.hasClass('acf-postbox')) {
 			$selector = $parent.prop('nodeName').toLowerCase()+'#'+$parent.attr('id')+$selector;
+			return $selector;
+		}
+		if ($parent.prop('nodeName').toLowerCase() == 'form') {
+			$selector = $parent.prop('nodeName').toLowerCase()+$selector;
 			return $selector;
 		}
 		if (typeof($parent.data('key')) != 'undefined') {
@@ -46,7 +52,7 @@ var acf_medium_editor_timeout = false;
 		//console.log($textarea);
 		var $selector = 'textarea'
 		$selector = acf_get_medium_editor_selector($textarea, $selector);
-		//console.log($selector);
+		console.log($selector);
 		if (!$selector) {
 			return;
 		}
