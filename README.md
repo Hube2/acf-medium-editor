@@ -76,11 +76,10 @@ if you run into issues let me know and I'll need to make a decision on wheter to
 the tag(s) from the allowed list.
 
 The currently supported tags are: abbr, acronym, address, article, asside, b, 
-bdi, bdo, blockquote, button, caption, cite, code, dd, del, details, dfn, 
-div, dl, dt, em, figcaption, figure, footer, h1, h2, h3, h4, h5, h6, header, 
-i, ins, li, main, mark, meta, ol, p, pre, q, s, samp, section, small, span, 
-strong, sub, sup, summary, table, tbody, td, tfoot, th, thead, time, tr, u, 
-ul, var, wbr
+bdi, bdo, blockquote, button, caption, cite, code, del, details, dfn, 
+div, em, footer, h1, h2, h3, h4, h5, h6, header, 
+i, ins, main, mark, meta, p, pre, q, s, samp, section, small, span, 
+strong, sub, sup, summary, time, u, var, wbr
 
 ***Attributes***: Add attributes to the html tag. Attibute names must be valid (they must 
 begin with a letter and contain only letter, numbers, underscores and dashes. Attribute 
