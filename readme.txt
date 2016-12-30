@@ -30,6 +30,9 @@ This ACF field type is compatible with:
 
 == Changelog ==
 
+= 2.0.0 =
+* removed support for nested html tags for custom buttons
+
 = 0.0.7 =
 * corrected bug when in clone field
 
