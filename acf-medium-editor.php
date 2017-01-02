@@ -1,11 +1,11 @@
 <?php
 
 	/*
-		Plugin Name: Advanced Custom Fields: Medium Editor Field
+		Plugin Name: Medium Editor Field for ACF
 		Plugin URI: https://github.com/Hube2/acf-medium-editor
 		GitHub Plugin URI: https://github.com/Hube2/acf-medium-editor
 		Description: Medium Editor Field for ACF 5 Pro
-		Version: 2.0.0
+		Version: 2.0.1
 		Author: John A. Huebner II
 		Author URI: https://github.com/Hube2
 		
