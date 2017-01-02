@@ -13,9 +13,9 @@ var acf_medium_editor_timeout = false;
 		}
 			
 		var $parent = $el.parent();
-		//console.log($parent);
-		//console.log($parent.prop('nodeName'));
 		if ($parent.hasClass('acf-clone')) {
+			// do not add editors to any clones
+			// wait until they are active
 			return false;
 		}
 		if ($parent.hasClass('acf-postbox')) {
@@ -38,10 +38,9 @@ var acf_medium_editor_timeout = false;
 		if (typeof($parent.attr('id')) != 'undefined') {
 			$selector = '#'+$parent.attr('id')+$selector;
 		}
-		//console.log($parent);
 		$selector = $parent.prop('nodeName').toLowerCase()+$selector;
-		//$selector = $selector.trim();
 		
+		// recurse
 		$selector = acf_get_medium_editor_selector($parent, $selector);
 		
 		return $selector;
@@ -56,25 +55,6 @@ var acf_medium_editor_timeout = false;
 		if (!$selector) {
 			return;
 		}
-		
-		/*
-		var $parent = $el.parent();
-		//console.log($parent);
-		
-		// do not instantiate editors on repeater clone rows
-		if ($parent.hasClass('acf-row') && $parent.hasClass('acf-clone')) {
-			console.log('not this one');
-			return;
-		}
-		if ($parent.is('td')) {
-			$parent = $parent.parent();
-			console.log($parent);
-			if ($parent.hasClass('acf-row') && $parent.hasClass('acf-clone')) {
-				return
-			}
-		}
-		//console.log($el);
-		*/
 		
 		var $key = $el.data('key');
 		var $uniqid = acf.get_uniqid();
@@ -100,58 +80,11 @@ var acf_medium_editor_timeout = false;
 		for (i in $options) {
 			$object[i] = $options[i];
 		}
-		/*
-		var $selector = '[data-key="'+$key+'"] textarea';
-		var $parent = $el.parent();
-		if ($parent.hasClass('acf-row')) {
-			var $id = $parent.data('id');
-			$selector = '[data-id="'+$id+'"] '+$selector;
-		} else if ($parent.is('td')) {
-			$parent = $parent.parent();
-			if ($parent.hasClass('acf-row')) {
-				var $id = $parent.data('id');
-				$selector = '[data-id="'+$id+'"] '+$selector;
-			}
-		}
-		*/
-		//console.log($selector);
-		//console.log($object);
-		//console.log($($selector));
-		//var theElements = $($selector).elements;
-		//console.log(theElements);
 		var editor = new MediumEditor($selector, $object);
 		
-		//console.log(editor);
-		/* hack to deal with MediumButton not updating textarea properly */
-		/*
-		var $targetObj;
-		$($selector).each(function(index, element) {
-			$targetObj = element;
-		});;
-		*/
-		//console.log($targetObj);
-		
-		//console.log(editor.elements[0]);
-		//console.log(editor.elements);
 		if (!editor.elements.length) {
-			// not a new editor
-			// happens when the editor is for a cloned field
-			//return;
-			// element wasn't returned
-			// need to find it
-			//console.log('no editor');
-			//console.log($selector);
-			/*
-			$($selector).each(function(index, element) {
-				//console.log(element);
-				//console.log($(element).attr('medium-editor-textarea-id'));
-			});
-			*/
-			// medium-editor-1478793850734
 			return;
 		}
-		
-		
 		
 		// cause update to editor to trigger acf change event
 		editor.subscribe('editableInput', function(e, editable) {
@@ -160,7 +93,9 @@ var acf_medium_editor_timeout = false;
 		
 		/* test removing the hack */
 		if (1) {return;}
-		alert ('here');
+		/* It looks like the hack can be removed now
+				will delete this code if I don't see any additional problems
+		*/
 		
 		var elements = editor.elements;
 		//console.log(elements);
