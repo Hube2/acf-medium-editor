@@ -1,7 +1,7 @@
 <?php
 
 	/*
-		Plugin Name: Medium Editor Field for ACF
+		Plugin Name: Medium WYSIWYG Editor Field for ACF
 		Plugin URI: https://github.com/Hube2/acf-medium-editor
 		GitHub Plugin URI: https://github.com/Hube2/acf-medium-editor
 		Description: Medium Editor Field for ACF 5 Pro
