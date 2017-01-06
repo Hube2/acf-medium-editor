@@ -1,4 +1,4 @@
-=== Medium Editor Field for ACF ===
+=== ACF Medium Editor Field ===
 Contributors: Hube2
 Tags: acf, add on, inline wysywig, medium editor, configurable
 Requires at least: 4.0.0
