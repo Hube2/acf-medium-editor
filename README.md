@@ -194,8 +194,9 @@ add_filter('acf/medium-editor-field/buttons', 'my_buttons', 10, 2);
 ```
 
 #### Automatic Updates
-Install [GitHub Updater](https://github.com/afragen/github-updater) on your site if you want to recieve automatic
-updates for this plugin.
+Github Updater support has been removed. This plugin has been puplished to WordPress.org here 
+https://wordpress.org/plugins/acf-medium-editor-field/. If you are having problems updating
+please try installing from there.
 
 #### Remove Nag
 You may notice that I've started adding a little nag to my plugins. It's just a box on some pages that lists my
