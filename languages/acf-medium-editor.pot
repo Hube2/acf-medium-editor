@@ -1,0 +1,221 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-01-11 15:02+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco - https://localise.biz/"
+
+#: fields/acf-medium-editor-v5.php:35
+msgid "Medium Editor"
+msgstr ""
+
+#: fields/acf-medium-editor-v5.php:50
+msgid "Bold"
+msgstr ""
+
+#: fields/acf-medium-editor-v5.php:55
+msgid "Italic"
+msgstr ""
+
+#: fields/acf-medium-editor-v5.php:60
+msgid "Underline"
+msgstr ""
+
+#: fields/acf-medium-editor-v5.php:65
+msgid "Strikethrough"
+msgstr ""
+
+#: fields/acf-medium-editor-v5.php:70
+msgid "Superscript"
+msgstr ""
+
+#: fields/acf-medium-editor-v5.php:75
+msgid "Subscript"
+msgstr ""
+
+#: fields/acf-medium-editor-v5.php:80
+msgid "Image"
+msgstr ""
+
+#: fields/acf-medium-editor-v5.php:85
+msgid "Numbered list"
+msgstr ""
+
+#: fields/acf-medium-editor-v5.php:90
+msgid "Bullet list"
+msgstr ""
+
+#: fields/acf-medium-editor-v5.php:95
+msgid "Increase indent"
+msgstr ""
+
+#: fields/acf-medium-editor-v5.php:100
+msgid "Decrease indent"
+msgstr ""
+
+#: fields/acf-medium-editor-v5.php:105
+msgid "Align left"
+msgstr ""
+
+#: fields/acf-medium-editor-v5.php:110
+msgid "Align center"
+msgstr ""
+
+#: fields/acf-medium-editor-v5.php:115
+msgid "Align right"
+msgstr ""
+
+#: fields/acf-medium-editor-v5.php:120
+msgid "Justify"
+msgstr ""
+
+#: fields/acf-medium-editor-v5.php:125
+msgid "Clear formating"
+msgstr ""
+
+#: fields/acf-medium-editor-v5.php:130
+msgid "Blockquote"
+msgstr ""
+
+#: fields/acf-medium-editor-v5.php:135
+msgid "Code"
+msgstr ""
+
+#: fields/acf-medium-editor-v5.php:140
+msgid "Heading type 1"
+msgstr ""
+
+#: fields/acf-medium-editor-v5.php:145
+msgid "Heading type 2"
+msgstr ""
+
+#: fields/acf-medium-editor-v5.php:150
+msgid "Heading type 3"
+msgstr ""
+
+#: fields/acf-medium-editor-v5.php:155
+msgid "Heading type 4"
+msgstr ""
+
+#: fields/acf-medium-editor-v5.php:160
+msgid "Heading type 5"
+msgstr ""
+
+#: fields/acf-medium-editor-v5.php:165
+msgid "Heading type 6"
+msgstr ""
+
+#: fields/acf-medium-editor-v5.php:288
+msgid "Buttons"
+msgstr ""
+
+#: fields/acf-medium-editor-v5.php:290
+msgid "Select the standard buttons that you want to include for medium-editor."
+msgstr ""
+
+#: fields/acf-medium-editor-v5.php:300
+msgid "Custom Buttons"
+msgstr ""
+
+#: fields/acf-medium-editor-v5.php:302
+msgid ""
+"Create Custom Buttons to be added to Button Bar.<br /><br /><em>(any buttons "
+"with missing values in any fields will be ignored when generating the button "
+"bar.)</em>"
+msgstr ""
+
+#: fields/acf-medium-editor-v5.php:304
+msgid "Add Button"
+msgstr ""
+
+#: fields/acf-medium-editor-v5.php:310 fields/acf-medium-editor-v5.php:345
+msgid "Name"
+msgstr ""
+
+#: fields/acf-medium-editor-v5.php:312
+msgid ""
+"Each button must have a unique name. Buttons with names that are duplicates "
+"of any other button in this button bar will be ignored."
+msgstr ""
+
+#: fields/acf-medium-editor-v5.php:318
+msgid "Label"
+msgstr ""
+
+#: fields/acf-medium-editor-v5.php:320
+msgid ""
+"The Label for the Button that will appear on the button bar. This field can "
+"contain HTML markup. For more information see <a href=\"https://github."
+"com/arcs-/MediumButton\" target=\"_blank\">MediumButton</a>. For Font-"
+"Awesome or other icon support the icon font set must be installed and "
+"included in the admin pages of your site."
+msgstr ""
+
+#: fields/acf-medium-editor-v5.php:326
+msgid "HTML Tag"
+msgstr ""
+
+#: fields/acf-medium-editor-v5.php:328
+msgid ""
+"Enter any valid, non-empty HTML tag type to wrap selected text with. Invalid "
+"tag names will be ignored. See documentaion for allowed HTML tags."
+msgstr ""
+
+#: fields/acf-medium-editor-v5.php:335
+msgid "Attributes"
+msgstr ""
+
+#: fields/acf-medium-editor-v5.php:338
+msgid "Add Attribute"
+msgstr ""
+
+#: fields/acf-medium-editor-v5.php:339
+msgid ""
+"Add attributes to the html tag.<br /><br /><em>(any attributes that do not "
+"have both a name and a value will be ignored. additionally, attribute names "
+"must start with a letter and contain only letters, numbers or dash "
+"characters and attribute values must not contain any double quotes.)</em>"
+msgstr ""
+
+#: fields/acf-medium-editor-v5.php:352
+msgid "Value"
+msgstr ""
+
+#: fields/acf-medium-editor-v5.php:372
+msgid "Other Medium Editor Options"
+msgstr ""
+
+#: fields/acf-medium-editor-v5.php:373
+msgid ""
+"Activation of an option will set that option to true. See medium-editor "
+"options."
+msgstr ""
+
+#. Name of the plugin
+msgid "ACF Medium Editor Field"
+msgstr ""
+
+#. Description of the plugin
+msgid "Medium Editor Field for ACF 5"
+msgstr ""
+
+#. URI of the plugin
+msgid "https://wordpress.org/plugins/acf-medium-editor-field/"
+msgstr ""
+
+#. Author of the plugin
+msgid "John A. Huebner II"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://github.com/Hube2"
+msgstr ""

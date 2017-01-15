@@ -1,0 +1,241 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ACF Medium Editor Field\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-01-11 15:03+0000\n"
+"PO-Revision-Date: 2017-01-11 15:03+0000\n"
+"Last-Translator: thomas <thomas.meyer@dreihochzwo.de>\n"
+"Language-Team: German\n"
+"Language: de-DE\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco - https://localise.biz/"
+
+#: fields/acf-medium-editor-v5.php:320
+msgid ""
+"The Label for the Button that will appear on the button bar. This field can "
+"contain HTML markup. For more information see <a href=\"https://github."
+"com/arcs-/MediumButton\" target=\"_blank\">MediumButton</a>. For Font-"
+"Awesome or other icon support the icon font set must be installed and "
+"included in the admin pages of your site."
+msgstr ""
+"Die Anzeige wird in der Button-Leiste dargestellt. Dieses Feld kann HTML-"
+"Code enthalten. Für weitere Infos: <a href=\"https://github.com/arcs-"
+"/MediumButton\" target=\"_blank\">MediumButton</a>. Sollte Font-Awesome oder "
+"ein anderer Icon-Font verwendet werden, muss der Icon-Font bereits für die "
+"Admin-Seiten des Themes verfügbar sein."
+
+#: fields/acf-medium-editor-v5.php:35
+msgid "Medium Editor"
+msgstr "Medium Editor"
+
+#: fields/acf-medium-editor-v5.php:50
+msgid "Bold"
+msgstr "Fett"
+
+#: fields/acf-medium-editor-v5.php:55
+msgid "Italic"
+msgstr "Kursiv"
+
+#: fields/acf-medium-editor-v5.php:60
+msgid "Underline"
+msgstr "Unterstrichen"
+
+#: fields/acf-medium-editor-v5.php:65
+msgid "Strikethrough"
+msgstr "Durchgestrichen"
+
+#: fields/acf-medium-editor-v5.php:70
+msgid "Superscript"
+msgstr "Hochgestellt"
+
+#: fields/acf-medium-editor-v5.php:75
+msgid "Subscript"
+msgstr "Tiefergestellt"
+
+#: fields/acf-medium-editor-v5.php:80
+msgid "Image"
+msgstr "Bild"
+
+#: fields/acf-medium-editor-v5.php:85
+msgid "Numbered list"
+msgstr "Nummerierte Liste"
+
+#: fields/acf-medium-editor-v5.php:90
+msgid "Bullet list"
+msgstr "Aufzählung"
+
+#: fields/acf-medium-editor-v5.php:95
+msgid "Increase indent"
+msgstr "Einzug erhöhen"
+
+#: fields/acf-medium-editor-v5.php:100
+msgid "Decrease indent"
+msgstr "Einzug verringern"
+
+#: fields/acf-medium-editor-v5.php:105
+msgid "Align left"
+msgstr "Linksbündig"
+
+#: fields/acf-medium-editor-v5.php:110
+msgid "Align center"
+msgstr "Zentrieren"
+
+#: fields/acf-medium-editor-v5.php:115
+msgid "Align right"
+msgstr "Rechtsbündig"
+
+#: fields/acf-medium-editor-v5.php:120
+msgid "Justify"
+msgstr "Blocksatz"
+
+#: fields/acf-medium-editor-v5.php:125
+msgid "Clear formating"
+msgstr "Formatierung löschen"
+
+#: fields/acf-medium-editor-v5.php:130
+msgid "Blockquote"
+msgstr "Zitat"
+
+#: fields/acf-medium-editor-v5.php:135
+msgid "Code"
+msgstr "Code"
+
+#: fields/acf-medium-editor-v5.php:140
+msgid "Heading type 1"
+msgstr "Überschrift Typ 1"
+
+#: fields/acf-medium-editor-v5.php:145
+msgid "Heading type 2"
+msgstr "Überschrift Typ 2"
+
+#: fields/acf-medium-editor-v5.php:150
+msgid "Heading type 3"
+msgstr "Überschrift Typ 3"
+
+#: fields/acf-medium-editor-v5.php:155
+msgid "Heading type 4"
+msgstr "Überschrift Typ 4"
+
+#: fields/acf-medium-editor-v5.php:160
+msgid "Heading type 5"
+msgstr "Überschrift Typ 5"
+
+#: fields/acf-medium-editor-v5.php:165
+msgid "Heading type 6"
+msgstr "Überschrift Typ 6"
+
+#: fields/acf-medium-editor-v5.php:288
+msgid "Buttons"
+msgstr "Buttons"
+
+#: fields/acf-medium-editor-v5.php:290
+msgid "Select the standard buttons that you want to include for medium-editor."
+msgstr ""
+"Auswahl der Standard-Buttons, die im Medium-Editor angezeigt werden sollen."
+
+#: fields/acf-medium-editor-v5.php:300
+msgid "Custom Buttons"
+msgstr "Benutzerdefinierte Buttons"
+
+#: fields/acf-medium-editor-v5.php:302
+msgid ""
+"Create Custom Buttons to be added to Button Bar.<br /><br /><em>(any buttons "
+"with missing values in any fields will be ignored when generating the button "
+"bar.)</em>"
+msgstr ""
+"Zusätzliche Buttons zum Medium-Editor hinzufügen<br /><br /><em>(Buttons mit "
+"fehlenden Werten in irgendeinem Feld werden bei der Erstellung des Medium "
+"Editors ignoriert).</em>"
+
+#: fields/acf-medium-editor-v5.php:304
+msgid "Add Button"
+msgstr "Button hinzufügen"
+
+#: fields/acf-medium-editor-v5.php:310 fields/acf-medium-editor-v5.php:345
+msgid "Name"
+msgstr "Name"
+
+#: fields/acf-medium-editor-v5.php:312
+msgid ""
+"Each button must have a unique name. Buttons with names that are duplicates "
+"of any other button in this button bar will be ignored."
+msgstr ""
+"Jeder Button muss einen eindeutigen Namen haben. Buttons mit einem Namen, "
+"der bereits vorhanden ist, werden bei der Erstellung ignoriert."
+
+#: fields/acf-medium-editor-v5.php:318
+msgid "Label"
+msgstr "Anzeige"
+
+#: fields/acf-medium-editor-v5.php:326
+msgid "HTML Tag"
+msgstr "HTML Tag"
+
+#: fields/acf-medium-editor-v5.php:328
+msgid ""
+"Enter any valid, non-empty HTML tag type to wrap selected text with. Invalid "
+"tag names will be ignored. See documentaion for allowed HTML tags."
+msgstr ""
+"Einen gültigen, nicht leeren HTML Tag verwenden, der den selektierten Text "
+"umgeben soll. Ungültige HTML Tags werden ignoriert. Siehe Dokumentation für "
+"die gültigen HTML Tags."
+
+#: fields/acf-medium-editor-v5.php:335
+msgid "Attributes"
+msgstr "Eigenschaften"
+
+#: fields/acf-medium-editor-v5.php:338
+msgid "Add Attribute"
+msgstr "Eigenschaft hinzufügen"
+
+#: fields/acf-medium-editor-v5.php:339
+msgid ""
+"Add attributes to the html tag.<br /><br /><em>(any attributes that do not "
+"have both a name and a value will be ignored. additionally, attribute names "
+"must start with a letter and contain only letters, numbers or dash "
+"characters and attribute values must not contain any double quotes.)</em>"
+msgstr ""
+"Eigenschaften zu dem HTML Tag hinzufügen.<br /><br /><em>(Eigenschaften, bei "
+"denen Name und/oder Wert fehlen, werden ignoriert. Hinweis: Eigenschaft-"
+"Namen müssen mit einem Buchstaben beginnen und dürfen nur Buchstaben, Zahlen "
+"oder Unterstriche enthalten und Eigenschaft-Werte dürfen keine "
+"Anführungszeichen enthalten.</em>"
+
+#: fields/acf-medium-editor-v5.php:352
+msgid "Value"
+msgstr "Wert"
+
+#: fields/acf-medium-editor-v5.php:372
+msgid "Other Medium Editor Options"
+msgstr "Weitere Medium Editor Optionen"
+
+#: fields/acf-medium-editor-v5.php:373
+msgid ""
+"Activation of an option will set that option to true. See medium-editor "
+"options."
+msgstr ""
+"Aktivierte Optionen werden auf <em>true</em> gesetzt. Siehe Medium-Editor "
+"Optionen."
+
+#. Name of the plugin
+msgid "ACF Medium Editor Field"
+msgstr "ACF Medium Editor Field"
+
+#. Description of the plugin
+msgid "Medium Editor Field for ACF 5"
+msgstr "Medium Editor Field für ACF 5"
+
+#. URI of the plugin
+msgid "https://wordpress.org/plugins/acf-medium-editor-field/"
+msgstr "https://wordpress.org/plugins/acf-medium-editor-field/"
+
+#. Author of the plugin
+msgid "John A. Huebner II"
+msgstr "John A. Huebner II"
+
+#. Author URI of the plugin
+msgid "https://github.com/Hube2"
+msgstr "https://github.com/Hube2"

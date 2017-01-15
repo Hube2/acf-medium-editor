@@ -51,7 +51,7 @@ var acf_medium_editor_timeout = false;
 		//console.log($textarea);
 		var $selector = 'textarea'
 		$selector = acf_get_medium_editor_selector($textarea, $selector);
-		console.log($selector);
+		// console.log($selector);
 		if (!$selector) {
 			return;
 		}
@@ -69,18 +69,27 @@ var acf_medium_editor_timeout = false;
 		}
 		var $placeholder = $data.data('placeholder');
 		$options =  JSON.parse(decodeURIComponent($data.data('options')));
+
 		var $object = {
-			toolbar: {buttons: $buttons},
+			toolbar: {
+				buttons: $buttons,
+				static: true,
+				align: 'left'
+			},
 			extensions: $custom_buttons,
 			placeholder: {
 				text: $placeholder,
 				hideOnClick: false
 			}
 		};
+		
 		for (i in $options) {
 			$object[i] = $options[i];
 		}
-		var editor = new MediumEditor($selector, $object);
+		var editor = new MediumEditor(
+			$selector,
+			$object
+		);
 		
 		if (!editor.elements.length) {
 			return;

@@ -150,16 +150,27 @@ requirements that are given when creating a custom button in the field settings 
 function my_custom_buttons($buttons, $field) {
   $buttons[] = array(
     'name' => 'red',
-    'label' => '<b style="color: #F00;">Red</b>"',
-    'attributes' => array(
-      'name' => 'style',
-      'value' => 'color: #F00;'
+    'tag' => 'span',
+    'label' => '<b title="Title for button" style="color: #F00;"><i class="dashicons dashicons-NAME"></i></b>',
+    'attributes'  => array(
+      array(
+        'name' => 'style',
+        'value' => 'color: #F00;'
+      ),
+      array(
+        'name' => 'class',
+        'value' => 'myClass'
+      )
     )
   );
   return $buttons;
 }
 add_filter('acf/medium-editor-field/custom-buttons', 'my_custom_buttons', 10, 2);
 ```
+
+For all dashicons available in WordPress take a look at the [Dashicons List](https://developer.wordpress.org/resource/dashicons/#thumbs-down) and get the correct name for the dashicons-NAME.
+
+If you use your own icon font (e.g. Font-Awesome) the icon font set must be installed and included in the admin pages of your site.
 
 ## Filter Buttons
 

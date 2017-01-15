@@ -6,6 +6,7 @@
 		Description: Medium Editor Field for ACF 5
 		Version: 2.0.2
 		Author: John A. Huebner II
+		Text Domain: acf-medium-editor
 		Author URI: https://github.com/Hube2
 		
 	*/
@@ -46,7 +47,7 @@
 				
 				// set text domain
 				// https://codex.wordpress.org/Function_Reference/load_plugin_textdomain
-				load_plugin_textdomain('acf-medium-editor', false, plugin_basename(dirname(__FILE__)) . '/lang'); 
+				load_plugin_textdomain('acf-medium-editor', false, plugin_basename(dirname(__FILE__)) . '/languages'); 
 				
 				
 				// include field
