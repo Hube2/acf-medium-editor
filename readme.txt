@@ -204,7 +204,7 @@ add_filter('acf/medium-editor-field/buttons', 'my_buttons', 10, 2);
 
 == Changelog ==
 
-= 2.1.0 ==
+= 2.1.0 =
 * Added dashicons (tmconnect)
 * Added transaltion Support (tmconnect)
 * Added German transaltion (tmconnect)
