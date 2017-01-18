@@ -470,9 +470,7 @@
 							'contentDefault'	=> $this->button_types[$dashbuttons]['contentDefault']
 						);
 					} else {
-						$dash_buttons[] = array(
-							'name' 				=> $custom_buttons[$dashbuttons]['name']
-						);
+						$dash_buttons[] = $dashbuttons;
 					}
 				}
 				
