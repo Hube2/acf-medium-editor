@@ -116,10 +116,6 @@
 						'name' => 'justifyFull',
 						'contentDefault' => '<b title="'.__('Justify', 'acf-medium-editor').'"><i class="dashicons dashicons-editor-justify"></i></b>'
 					),
-					'removeFormat' => array(
-						'name' => 'removeFormat',
-						'contentDefault' => '<b title="'.__('Clear formating', 'acf-medium-editor').'"><i class="dashicons dashicons-editor-removeformatting"></i></b>'
-					),
 					'h1' => array(
 						'name' => 'h1',
 						'contentDefault' => '<b title="'.__('Heading type 1', 'acf-medium-editor').'">H1</b>'
@@ -143,6 +139,10 @@
 					'h6' => array(
 						'name' => 'h6',
 						'contentDefault' => '<b title="'.__('Heading type 6', 'acf-medium-editor').'">H6</b>'
+					),
+					'removeFormat' => array(
+						'name' => 'removeFormat',
+						'contentDefault' => '<b title="'.__('Clear formating', 'acf-medium-editor').'"><i class="dashicons dashicons-editor-removeformatting"></i></b>'
 					)
 				);
 
