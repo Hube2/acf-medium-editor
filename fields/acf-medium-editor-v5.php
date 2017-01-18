@@ -60,17 +60,29 @@
 						'name' => 'strikethrough',
 						'contentDefault' => '<b title="'.__('Strikethrough', 'acf-medium-editor').'"><i class="dashicons dashicons-editor-strikethrough"></i></b>'
 					),
-					'superscript' => array(
-						'name' => 'superscript',
-						'contentDefault' => '<b title="'.__('Superscript', 'acf-medium-editor').'">x<sup>1</sup></b>'
-					),
 					'subscript' => array(
 						'name' => 'subscript',
 						'contentDefault' => '<b title="'.__('Subscript', 'acf-medium-editor').'">x<sub>1</sub></b>'
 					),
+					'superscript' => array(
+						'name' => 'superscript',
+						'contentDefault' => '<b title="'.__('Superscript', 'acf-medium-editor').'">x<sup>1</sup></b>'
+					),
+					'anchor' => array(
+						'name' => 'anchor',
+						'contentDefault' => '<b title="'.__('Anchor', 'acf-medium-editor').'"><i class="dashicons dashicons-admin-links"></i></b>'
+					),
 					'image' => array(
 						'name' => 'image',
 						'contentDefault' => '<b title="'.__('Image', 'acf-medium-editor').'"><i class="dashicons dashicons-format-image"></i></b>'
+					),
+					'quote' => array(
+						'name' => 'quote',
+						'contentDefault' => '<b title="'.__('Blockquote', 'acf-medium-editor').'"><i class="dashicons dashicons-editor-quote"></i></b>'
+					),
+					'pre' => array(
+						'name' => 'pre',
+						'contentDefault' => '<b title="'.__('Code', 'acf-medium-editor').'"><i class="dashicons dashicons-editor-code"></i></b>'
 					),
 					'orderedlist' => array(
 						'name' => 'orderedlist',
@@ -107,14 +119,6 @@
 					'removeFormat' => array(
 						'name' => 'removeFormat',
 						'contentDefault' => '<b title="'.__('Clear formating', 'acf-medium-editor').'"><i class="dashicons dashicons-editor-removeformatting"></i></b>'
-					),
-					'quote' => array(
-						'name' => 'quote',
-						'contentDefault' => '<b title="'.__('Blockquote', 'acf-medium-editor').'"><i class="dashicons dashicons-editor-quote"></i></b>'
-					),
-					'pre' => array(
-						'name' => 'pre',
-						'contentDefault' => '<b title="'.__('Code', 'acf-medium-editor').'"><i class="dashicons dashicons-editor-code"></i></b>'
 					),
 					'h1' => array(
 						'name' => 'h1',
