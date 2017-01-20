@@ -44,7 +44,7 @@ Hopefully others find it usefull.
 
 ## Field Settings
 See Setting Descriptions Below Screenshot
-![Field Settings](https://github.com/Hube2/acf-medium-editor/blob/master/screenshot-2.png)
+![Field Settings](https://github.com/Hube2/acf-medium-editor/blob/master/screenshot-3.png)
 
 The following is an explanation of the fields, not including the ones that should be self explanatory.
 

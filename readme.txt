@@ -3,7 +3,7 @@ Contributors: Hube2, tmconnect
 Tags: acf, add on, inline wysywig, medium editor, configurable
 Requires at least: 4.0.0
 Tested up to: 4.7.0
-Stable tag: 2.1.1
+Stable tag: 2.2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -32,7 +32,8 @@ For more information see
 
 == Screenshots ==
 
-1. Medium Editor Field
+1. Medium Editor field when toolbar is not shown
+2. Medium Editor field when toolbar is shown
 2. Medium Editor Settings
 
 == Installation ==
@@ -106,9 +107,9 @@ single line fields to create line breaks.
 
 == Medium Editor Theme ==
 
-MediumEditor fields will use the default theme unless you change it. You can alter the theme used for all 
-MediumEditor fields, this is not something that you can apply to only some fields. You can change the theme
-on your site in one of two ways:
+MediumEditor fields will use the WordPress theme created specifically for the this plugin unless you change it.
+You can alter the theme used for all MediumEditor fields, this is not something that you can apply to only 
+some fields. You can change the theme on your site in one of two ways:
 
 1) wp-config.php
 Add the following code to your wp-cofig.php file
@@ -203,6 +204,10 @@ add_filter('acf/medium-editor-field/buttons', 'my_buttons', 10, 2);
 
 
 == Changelog ==
+
+= 2.2.0 =
+* added WordPress theme to medium editor
+* other changes to make the editor look and feel more like WordPress
 
 = 2.1.1 =
 * added missing anchor button missed in 2.1.0 update

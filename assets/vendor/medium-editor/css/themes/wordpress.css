@@ -1,0 +1,46 @@
+
+/* 
+	font size 20
+	button padding 2px 3px
+	color #333
+	line-height normal
+	button container border-radius 2px solid 1px transparent
+	button container hover border #333
+	button margin 2px
+	background color of everything but bar is transparent
+	button bar padding 3px
+	button bar background #f5f5f5
+*/
+
+.medium-editor-toolbar {
+	background: #f5f5f5;
+	padding: 0;
+	border: none;
+	height: auto;
+	line-height: normal;
+	border: 1px solid #ddd;
+}
+
+.medium-editor-toolbar li button {
+	font-size: inherit;
+	line-height: 20px;
+	padding: 2px 3px;
+	margin: 3px 2px;
+	width: 20px;
+	height: 20px;
+	overflow: hidden;
+	background-color: transparent;
+	border: 1px solid transparent;
+	border-radius: 2px;
+	box-sizing: content-box;
+	color: #555d66;
+}
+
+.medium-editor-toolbar li:hover button {
+	border-color: #555d66;
+}
+
+.medium-editor-toolbar li .medium-editor-action-pre {
+	padding: 2px 3px;
+}
+	

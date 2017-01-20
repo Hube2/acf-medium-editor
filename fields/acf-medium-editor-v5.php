@@ -391,6 +391,7 @@
 				
 				$e .= $value;
 				$e .= '</textarea>';
+				$e .= '<span>('.__('select text for formatting options', 'acf-medium-editor').')</span>';
 				
 				echo $e;
 				
@@ -526,6 +527,7 @@
 				
 				$themes = array('beagle', 'bootstrap', 'default', 'flat', 'mani', 'roman', 'tim');
 				$theme = 'default';
+				$theme = 'wordpress';
 				if (defined('MEDIUM_EDITOR_THEME')) {
 					if (in_array(MEDIUM_EDITOR_THEME, $themes)) {
 						$theme = MEDIUM_EDITOR_THEME;
@@ -534,6 +536,9 @@
 				$theme_filter = apply_filters('medium-editor-theme', $theme);
 				if (in_array($theme_filter, $themes)) {
 					$theme = $theme_filter;
+				}
+				if ($theme == 'wordpress') {
+					$min = '';
 				}
 				
 				wp_register_style('medium-editor-theme', $url.'assets/vendor/medium-editor/css/themes/'.$theme.$min.'.css', array('medium-editor'), $version);

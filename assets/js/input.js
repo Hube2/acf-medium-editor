@@ -48,10 +48,8 @@ var acf_medium_editor_timeout = false;
 	
 	function initialize_acf_medium_editor_field($el) {
 		var $textarea = $el.find('textarea').first();
-		//console.log($textarea);
 		var $selector = 'textarea'
 		$selector = acf_get_medium_editor_selector($textarea, $selector);
-		// console.log($selector);
 		if (!$selector) {
 			return;
 		}
@@ -59,6 +57,11 @@ var acf_medium_editor_timeout = false;
 		var $key = $el.data('key');
 		var $uniqid = acf.get_uniqid();
 		var $data = $el.find('div[data-key="medium_editor_'+$key+'"]').first();
+		
+		$data.closest('.acf-input').prepend('<div id="medium-editor-container-'+$uniqid+'" style="position:relitive; display: none;"></div>');
+		var $container;
+		$container = document.getElementById('medium-editor-container-'+$uniqid);
+		
 		var $buttons = decodeURIComponent($data.data('buttons'));
 		var $buttons = JSON.parse(decodeURIComponent($data.data('buttons')));
 		var $extensions = JSON.parse(decodeURIComponent($data.data('extensions')));
@@ -73,14 +76,14 @@ var acf_medium_editor_timeout = false;
 		var $object = {
 			toolbar: {
 				buttons: $buttons,
-				static: true,
-				align: 'left'
+				relativeContainer: $container
 			},
 			extensions: $custom_buttons,
 			placeholder: {
 				text: $placeholder,
 				hideOnClick: false
-			}
+			},
+			elementsContainer: $container
 		};
 		
 		for (i in $options) {
@@ -98,6 +101,12 @@ var acf_medium_editor_timeout = false;
 		// cause update to editor to trigger acf change event
 		editor.subscribe('editableInput', function(e, editable) {
 			$($selector).trigger('change');
+		});
+		editor.subscribe('showToolbar', function(e, editable) {
+			$('#medium-editor-container-'+$uniqid).css('display', 'block');
+		});
+		editor.subscribe('hideToolbar', function(e, editable) {
+			$('#medium-editor-container-'+$uniqid).css('display', 'none');
 		});
 		
 		/* test removing the hack */
