@@ -7,7 +7,7 @@ Ever needed to give a client a way to edit the appearence of text without wantin
 WYSIWYG editor? Need something less than a WYSYWIG but more than a text or textarea field that you can
 configure the way you need it to work with the features you need it to have?
 
-![Example](https://github.com/Hube2/acf-medium-editor/blob/master/screenshot-1.png)
+![Example](https://github.com/Hube2/acf-medium-editor/blob/master/screenshot-2.png)
 
 == Installation ==
 
