@@ -35,7 +35,7 @@
 				$this->label = __('Medium Editor', 'acf-medium-editor');
 				$this->defaults = array(
 					'standard_buttons' => array(
-						'bold', 'italic', 'underline'
+						'bold', 'italic', 'underline', 'removeFormat'
 					),
 					'other_options' => array('disableReturn', 'disableDoubleReturn', 'disableExtraSpaces'),
 					'placeholder' => '',
@@ -269,7 +269,7 @@
 					'name' => 'standard_buttons',
 					'instructions'	=> __('Select the standard buttons that you want to include for medium-editor.', 'acf-medium-editor'),
 					'required' => 0,
-					'default_value' => array('bold', 'italic', 'underline'),
+					'default_value' => array('bold', 'italic', 'underline', 'removeFormat'),
 					'choices' => $btn_choices,
 					'layout' => 'horizontal'
 				);
@@ -363,7 +363,7 @@
 				// echo '<pre>'; print_r($field); echo '</pre>';
 				// vars
 				$atts = array();
-				$o = array('id', 'class', 'name', 'placeholder');
+				$o = array('id', 'class', 'name');
 				$s = array('readonly', 'disabled');
 				$e = '';
 				// append atts
@@ -378,7 +378,7 @@
 				
 				
 				$value = $field['value'];
-				if (isset($field['other_options'])) {
+				if (isset($field['other_options']) && is_array($field['other_options'])) {
 					if (in_array('disableReturn', $field['other_options'])) {
 						if (in_array('allowBreakInSingleLineInput', $field['other_options'])) {
 							$value = preg_replace('#<(br[^>]*)>#is', '&amp;lt;\1&amp;gt;', $value);
@@ -465,7 +465,7 @@
 				$dash_buttons = array();
 
 				foreach ($buttons as $dashbuttons) {
-					if ( array_key_exists($dashbuttons, $this->button_types) ) {
+					if ( array_key_exists($dashbuttons, $this->button_types) && is_array($this->button_types[$dashbuttons]) ) {
 						$dash_buttons[] = array(
 							'name' 				=> $this->button_types[$dashbuttons]['name'],
 							'contentDefault'	=> $this->button_types[$dashbuttons]['contentDefault']
@@ -511,6 +511,7 @@
 				$this->doc_link = $url.'doc/';
 				
 				$min = '.min';
+				$min = '';
 				if (defined('SCRIPT_DEBUG') && SCRIPT_DEBUG) {
 					$min = '';
 				}
@@ -526,7 +527,7 @@
 				
 				
 				$themes = array('beagle', 'bootstrap', 'default', 'flat', 'mani', 'roman', 'tim');
-				$theme = 'default';
+				//$theme = 'default';
 				$theme = 'wordpress';
 				if (defined('MEDIUM_EDITOR_THEME')) {
 					if (in_array(MEDIUM_EDITOR_THEME, $themes)) {
