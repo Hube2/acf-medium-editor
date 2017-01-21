@@ -511,7 +511,7 @@
 				$this->doc_link = $url.'doc/';
 				
 				$min = '.min';
-				$min = '';
+				//$min = '';
 				if (defined('SCRIPT_DEBUG') && SCRIPT_DEBUG) {
 					$min = '';
 				}
