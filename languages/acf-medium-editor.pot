@@ -1,64 +1,85 @@
+# ACF Medium Editor Pot
+# Copyright (C) 2017 ...
+# This file is distrubuted under the GPL-2.0+
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-11 15:02+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Project-Id-Version: ACF Medium Editor\n"
+"Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
+"POT-Creation-Date: 2017-01-20 21:45-0500\n"
+"PO-Revision-Date: \n"
+"Last-Translator: John Huebner <johnhuebner@site-seeker.com>\n"
 "Language-Team: \n"
-"Language: \n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Loco - https://localise.biz/"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Textdomain-Support: yesX-Generator: Poedit 1.6.4\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_x;esc_html_e;esc_html__;esc_attr_e;esc_attr__;"
+"_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_x:1,2c;_n:1,2;_n_noop:1,2;"
+"__ngettext_noop:1,2;_c,_nc:4c,1,2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Generator: Poedit 1.8.11\n"
+"X-Poedit-SearchPath-0: .\n"
 
 #: fields/acf-medium-editor-v5.php:35
 msgid "Medium Editor"
 msgstr ""
 
-#: fields/acf-medium-editor-v5.php:50
+#: fields/acf-medium-editor-v5.php:49
 msgid "Bold"
 msgstr ""
 
-#: fields/acf-medium-editor-v5.php:55
+#: fields/acf-medium-editor-v5.php:53
 msgid "Italic"
 msgstr ""
 
-#: fields/acf-medium-editor-v5.php:60
+#: fields/acf-medium-editor-v5.php:57
 msgid "Underline"
 msgstr ""
 
-#: fields/acf-medium-editor-v5.php:65
+#: fields/acf-medium-editor-v5.php:61
 msgid "Strikethrough"
 msgstr ""
 
-#: fields/acf-medium-editor-v5.php:70
-msgid "Superscript"
-msgstr ""
-
-#: fields/acf-medium-editor-v5.php:75
+#: fields/acf-medium-editor-v5.php:65
 msgid "Subscript"
 msgstr ""
 
-#: fields/acf-medium-editor-v5.php:80
+#: fields/acf-medium-editor-v5.php:69
+msgid "Superscript"
+msgstr ""
+
+#: fields/acf-medium-editor-v5.php:73
+msgid "Anchor"
+msgstr ""
+
+#: fields/acf-medium-editor-v5.php:77
 msgid "Image"
 msgstr ""
 
+#: fields/acf-medium-editor-v5.php:81
+msgid "Blockquote"
+msgstr ""
+
 #: fields/acf-medium-editor-v5.php:85
+msgid "Code"
+msgstr ""
+
+#: fields/acf-medium-editor-v5.php:89
 msgid "Numbered list"
 msgstr ""
 
-#: fields/acf-medium-editor-v5.php:90
+#: fields/acf-medium-editor-v5.php:93
 msgid "Bullet list"
 msgstr ""
 
-#: fields/acf-medium-editor-v5.php:95
+#: fields/acf-medium-editor-v5.php:97
 msgid "Increase indent"
 msgstr ""
 
-#: fields/acf-medium-editor-v5.php:100
+#: fields/acf-medium-editor-v5.php:101
 msgid "Decrease indent"
 msgstr ""
 
@@ -66,119 +87,127 @@ msgstr ""
 msgid "Align left"
 msgstr ""
 
-#: fields/acf-medium-editor-v5.php:110
+#: fields/acf-medium-editor-v5.php:109
 msgid "Align center"
 msgstr ""
 
-#: fields/acf-medium-editor-v5.php:115
+#: fields/acf-medium-editor-v5.php:113
 msgid "Align right"
 msgstr ""
 
-#: fields/acf-medium-editor-v5.php:120
+#: fields/acf-medium-editor-v5.php:117
 msgid "Justify"
 msgstr ""
 
-#: fields/acf-medium-editor-v5.php:125
-msgid "Clear formating"
-msgstr ""
-
-#: fields/acf-medium-editor-v5.php:130
-msgid "Blockquote"
-msgstr ""
-
-#: fields/acf-medium-editor-v5.php:135
-msgid "Code"
-msgstr ""
-
-#: fields/acf-medium-editor-v5.php:140
+#: fields/acf-medium-editor-v5.php:121
 msgid "Heading type 1"
 msgstr ""
 
-#: fields/acf-medium-editor-v5.php:145
+#: fields/acf-medium-editor-v5.php:125
 msgid "Heading type 2"
 msgstr ""
 
-#: fields/acf-medium-editor-v5.php:150
+#: fields/acf-medium-editor-v5.php:129
 msgid "Heading type 3"
 msgstr ""
 
-#: fields/acf-medium-editor-v5.php:155
+#: fields/acf-medium-editor-v5.php:133
 msgid "Heading type 4"
 msgstr ""
 
-#: fields/acf-medium-editor-v5.php:160
+#: fields/acf-medium-editor-v5.php:137
 msgid "Heading type 5"
 msgstr ""
 
-#: fields/acf-medium-editor-v5.php:165
+#: fields/acf-medium-editor-v5.php:141
 msgid "Heading type 6"
 msgstr ""
 
-#: fields/acf-medium-editor-v5.php:288
+#: fields/acf-medium-editor-v5.php:145
+msgid "Clear formating"
+msgstr ""
+
+#: fields/acf-medium-editor-v5.php:247
+msgid "Default Value"
+msgstr ""
+
+#: fields/acf-medium-editor-v5.php:248
+msgid "Appears when creating a new post"
+msgstr ""
+
+#: fields/acf-medium-editor-v5.php:255
+msgid "Placeholder Text"
+msgstr ""
+
+#: fields/acf-medium-editor-v5.php:256
+msgid "Appears within the input"
+msgstr ""
+
+#: fields/acf-medium-editor-v5.php:268
 msgid "Buttons"
 msgstr ""
 
-#: fields/acf-medium-editor-v5.php:290
+#: fields/acf-medium-editor-v5.php:270
 msgid "Select the standard buttons that you want to include for medium-editor."
 msgstr ""
 
-#: fields/acf-medium-editor-v5.php:300
+#: fields/acf-medium-editor-v5.php:280
 msgid "Custom Buttons"
 msgstr ""
 
-#: fields/acf-medium-editor-v5.php:302
+#: fields/acf-medium-editor-v5.php:282
 msgid ""
 "Create Custom Buttons to be added to Button Bar.<br /><br /><em>(any buttons "
 "with missing values in any fields will be ignored when generating the button "
 "bar.)</em>"
 msgstr ""
 
-#: fields/acf-medium-editor-v5.php:304
+#: fields/acf-medium-editor-v5.php:284
 msgid "Add Button"
 msgstr ""
 
-#: fields/acf-medium-editor-v5.php:310 fields/acf-medium-editor-v5.php:345
+#: fields/acf-medium-editor-v5.php:290 fields/acf-medium-editor-v5.php:325
 msgid "Name"
 msgstr ""
 
-#: fields/acf-medium-editor-v5.php:312
+#: fields/acf-medium-editor-v5.php:292
 msgid ""
 "Each button must have a unique name. Buttons with names that are duplicates "
 "of any other button in this button bar will be ignored."
 msgstr ""
 
-#: fields/acf-medium-editor-v5.php:318
+#: fields/acf-medium-editor-v5.php:298
 msgid "Label"
 msgstr ""
 
-#: fields/acf-medium-editor-v5.php:320
+#: fields/acf-medium-editor-v5.php:300
 msgid ""
 "The Label for the Button that will appear on the button bar. This field can "
-"contain HTML markup. For more information see <a href=\"https://github."
-"com/arcs-/MediumButton\" target=\"_blank\">MediumButton</a>. For Font-"
-"Awesome or other icon support the icon font set must be installed and "
-"included in the admin pages of your site."
+"contain HTML markup. For more information see <a href=\"https://github.com/"
+"arcs-/MediumButton\" target=\"_blank\">MediumButton</a>. For Font-Awesome or "
+"other icon support the icon font set must be installed and included in the "
+"admin pages of your site."
 msgstr ""
 
-#: fields/acf-medium-editor-v5.php:326
+#: fields/acf-medium-editor-v5.php:306
 msgid "HTML Tag"
 msgstr ""
 
-#: fields/acf-medium-editor-v5.php:328
+#: fields/acf-medium-editor-v5.php:308
 msgid ""
 "Enter any valid, non-empty HTML tag type to wrap selected text with. Invalid "
 "tag names will be ignored. See documentaion for allowed HTML tags."
 msgstr ""
 
-#: fields/acf-medium-editor-v5.php:335
+#: fields/acf-medium-editor-v5.php:315
 msgid "Attributes"
 msgstr ""
 
-#: fields/acf-medium-editor-v5.php:338
+#: fields/acf-medium-editor-v5.php:318
 msgid "Add Attribute"
 msgstr ""
 
-#: fields/acf-medium-editor-v5.php:339
+#: fields/acf-medium-editor-v5.php:319
 msgid ""
 "Add attributes to the html tag.<br /><br /><em>(any attributes that do not "
 "have both a name and a value will be ignored. additionally, attribute names "
@@ -186,36 +215,20 @@ msgid ""
 "characters and attribute values must not contain any double quotes.)</em>"
 msgstr ""
 
-#: fields/acf-medium-editor-v5.php:352
+#: fields/acf-medium-editor-v5.php:332
 msgid "Value"
 msgstr ""
 
-#: fields/acf-medium-editor-v5.php:372
+#: fields/acf-medium-editor-v5.php:352
 msgid "Other Medium Editor Options"
 msgstr ""
 
-#: fields/acf-medium-editor-v5.php:373
+#: fields/acf-medium-editor-v5.php:353
 msgid ""
 "Activation of an option will set that option to true. See medium-editor "
 "options."
 msgstr ""
 
-#. Name of the plugin
-msgid "ACF Medium Editor Field"
-msgstr ""
-
-#. Description of the plugin
-msgid "Medium Editor Field for ACF 5"
-msgstr ""
-
-#. URI of the plugin
-msgid "https://wordpress.org/plugins/acf-medium-editor-field/"
-msgstr ""
-
-#. Author of the plugin
-msgid "John A. Huebner II"
-msgstr ""
-
-#. Author URI of the plugin
-msgid "https://github.com/Hube2"
+#: fields/acf-medium-editor-v5.php:394
+msgid "select text for formatting options"
 msgstr ""
