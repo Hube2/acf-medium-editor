@@ -58,7 +58,7 @@ var acf_medium_editor_timeout = false;
 		var $uniqid = acf.get_uniqid();
 		var $data = $el.find('div[data-key="medium_editor_'+$key+'"]').first();
 		
-		$data.closest('.acf-input').prepend('<div id="medium-editor-container-'+$uniqid+'" style="position:relitive;"></div>');
+		$data.closest('.acf-input').prepend('<div id="medium-editor-container-'+$uniqid+'" style="position: relitive; display: none;"></div>');
 		var $container;
 		$container = document.getElementById('medium-editor-container-'+$uniqid);
 		
