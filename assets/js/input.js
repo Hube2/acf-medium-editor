@@ -7,7 +7,6 @@ var acf_medium_editor_timeout = false;
 	function acf_get_medium_editor_selector($el, $selector) {
 		// because of repeaters, flex fields and clones
 		// selector needs to be absolutely specific
-		//console.log($selector);
 		if ($selector != '') {
 			$selector = '>'+$selector.trim();
 		}
@@ -58,10 +57,16 @@ var acf_medium_editor_timeout = false;
 		var $uniqid = acf.get_uniqid();
 		var $data = $el.find('div[data-key="medium_editor_'+$key+'"]').first();
 		
-		$data.closest('.acf-input').prepend('<div id="medium-editor-container-'+$uniqid+'" style="position: relitive; display: none;"></div>');
 		var $container;
-		$container = document.getElementById('medium-editor-container-'+$uniqid);
+		var $static = false;
+		var $align = 'left';
 		
+		if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1)  {
+			$static = true;
+			$container = null;
+		} else {
+			$data.closest('.acf-input').prepend('<div id="medium-editor-container-'+$uniqid+'" style="position: relitive; display: none;"></div>');
+			$container = document.getElementById('medium-editor-container-'+$uniqid);		}
 		var $buttons = decodeURIComponent($data.data('buttons'));
 		var $buttons = JSON.parse(decodeURIComponent($data.data('buttons')));
 		var $extensions = JSON.parse(decodeURIComponent($data.data('extensions')));
@@ -76,8 +81,8 @@ var acf_medium_editor_timeout = false;
 		var $object = {
 			toolbar: {
 				buttons: $buttons,
-				//static: true,
-				//align: 'left',
+				static: $static,
+				align: $align,
 				relativeContainer: $container
 			},
 			extensions: $custom_buttons,
@@ -92,8 +97,6 @@ var acf_medium_editor_timeout = false;
 			$object[i] = $options[i];
 		}
 		
-		//console.log($selector);
-		//console.log($object);
 		var editor = new MediumEditor($selector, $object);
 		
 		if (!editor.elements.length) {
@@ -110,40 +113,6 @@ var acf_medium_editor_timeout = false;
 		editor.subscribe('hideToolbar', function(e, editable) {
 			$('#medium-editor-container-'+$uniqid).css('display', 'none');
 		});
-		
-		/* test removing the hack */
-		if (1) {return;}
-		/* It looks like the hack can be removed now
-				will delete this code if I don't see any additional problems
-		*/
-		
-		var elements = editor.elements;
-		//console.log(elements);
-		for (i=0; i<editor.elements.length; i++) {
-			//console.log(elements[i].id);
-			var editorId = elements[i].id;
-			//console.log(editorId);
-			//var $target = document.getElementById(editorId);
-			//console.log($target.getAttribute('medium-editor-index'));
-			$('#'+editorId).bind('DOMSubtreeModified', function(e) {
-				//console.log(e.currentTarget.id);
-				var $target = document.getElementById(e.currentTarget.id);
-				var $targetObj
-				$($target).closest('.acf-input').find('textarea').each(function(index, element) {
-					$targetObj = element;
-				});
-				//console.log($targetObj);
-				//console.log($targetObj);
-				//$targetObj.innerHTML = $target.innerHTML;
-				editor.events.updateInput($target, $targetObj);
-				//console.log($($targetObj));
-				// force update of content in textarea
-				$($targetObj).val($target.innerHTML);
-				//console.log($($targetObj).val());
-				$($selector).trigger('change');
-			});
-		}
-		/* end of hack */
 	}
 	if(typeof acf.add_action !== 'undefined') {
 		acf.add_action('ready append', function( $el ){
