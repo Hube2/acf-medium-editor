@@ -3,7 +3,7 @@ Contributors: Hube2, tmconnect
 Tags: acf, add on, inline wysywig, medium editor, configurable
 Requires at least: 4.0.0
 Tested up to: 4.7.0
-Stable tag: 2.2.0
+Stable tag: 2.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -204,6 +204,9 @@ add_filter('acf/medium-editor-field/buttons', 'my_buttons', 10, 2);
 
 
 == Changelog ==
+
+= 2.2.1 =
+* fixed behaviour of toolbar in safari
 
 = 2.2.0 =
 * added WordPress theme to medium editor
