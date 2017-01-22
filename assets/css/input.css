@@ -3,6 +3,17 @@
 		font-style: italic;
 	}
 	
+	[id^="medium-editor-container-"] {
+		position: relative;
+	}
+
+	[id^="medium-editor-container-"] .medium-editor-toolbar {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		transform: translateY(-100%);
+	}
+	
 	.medium-editor-element {
 		box-sizing: border-box;
 		font-size: 14px;
@@ -20,6 +31,7 @@
 	}
 	 
 	.medium-editor-toolbar {
+		/* above WP admin menu */
 		z-index: 9999 !important;
 	}
 	
@@ -76,4 +88,6 @@
 		position: relative;
 		top: 2px;
 	}
+
+
 	

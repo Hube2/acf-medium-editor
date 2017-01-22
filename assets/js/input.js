@@ -65,7 +65,7 @@ var acf_medium_editor_timeout = false;
 			$static = true;
 			$container = null;
 		} else {
-			$data.closest('.acf-input').prepend('<div id="medium-editor-container-'+$uniqid+'" style="position: relitive; display: none;"></div>');
+			$data.closest('.acf-input').prepend('<div id="medium-editor-container-'+$uniqid+'"></div>');
 			$container = document.getElementById('medium-editor-container-'+$uniqid);		}
 		var $buttons = decodeURIComponent($data.data('buttons'));
 		var $buttons = JSON.parse(decodeURIComponent($data.data('buttons')));
@@ -106,12 +106,6 @@ var acf_medium_editor_timeout = false;
 		// cause update to editor to trigger acf change event
 		editor.subscribe('editableInput', function(e, editable) {
 			$($selector).trigger('change');
-		});
-		editor.subscribe('showToolbar', function(e, editable) {
-			$('#medium-editor-container-'+$uniqid).css('display', 'block');
-		});
-		editor.subscribe('hideToolbar', function(e, editable) {
-			$('#medium-editor-container-'+$uniqid).css('display', 'none');
 		});
 	}
 	if(typeof acf.add_action !== 'undefined') {
