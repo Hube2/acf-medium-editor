@@ -76,24 +76,24 @@ var acf_medium_editor_timeout = false;
 		var $object = {
 			toolbar: {
 				buttons: $buttons,
-				static: true,
-				align: 'left'
-				//relativeContainer: $container
+				//static: true,
+				//align: 'left',
+				relativeContainer: $container
 			},
 			extensions: $custom_buttons,
 			placeholder: {
 				text: $placeholder,
 				hideOnClick: false
 			},
-			//elementsContainer: $container
+			elementsContainer: $container
 		};
 		
 		for (i in $options) {
 			$object[i] = $options[i];
 		}
 		
-		console.log($selector);
-		console.log($object);
+		//console.log($selector);
+		//console.log($object);
 		var editor = new MediumEditor($selector, $object);
 		
 		if (!editor.elements.length) {
@@ -104,14 +104,12 @@ var acf_medium_editor_timeout = false;
 		editor.subscribe('editableInput', function(e, editable) {
 			$($selector).trigger('change');
 		});
-		/*
 		editor.subscribe('showToolbar', function(e, editable) {
 			$('#medium-editor-container-'+$uniqid).css('display', 'block');
 		});
 		editor.subscribe('hideToolbar', function(e, editable) {
 			$('#medium-editor-container-'+$uniqid).css('display', 'none');
 		});
-		*/
 		
 		/* test removing the hack */
 		if (1) {return;}
