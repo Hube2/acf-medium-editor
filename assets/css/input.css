@@ -11,7 +11,11 @@
 		position: absolute;
 		top: 0px;
 		left: 0px;
-		transform: translateY(-100%);
+		-webkit-transform: translateY(-100%);
+		-moz-transform: translateY(-100%);
+		-ms-transform: translateY(-100%);
+		-o-transform: translateY(-100%);
+		transform: translateY(-100%)
 	}
 	
 	.medium-editor-element {
