@@ -1,3 +1,4 @@
+
 	
 	[data-type="medium_editor"] .acf-input span {
 		font-style: italic;
@@ -38,6 +39,20 @@
 		/* above WP admin menu */
 		z-index: 9999 !important;
 	}
+	
+	/* Medium Editor field normalizing bugfix */
+	.medium-editor-element:empty {
+		padding-top: 8px;
+		padding-bottom: 8px;
+		font-size: 13px;
+		line-height: 1.5;
+	}
+	.medium-editor-element > p:first-child {
+		margin-top: 6px;
+	}
+	.medium-editor-element > p:last-child {
+		margin-bottom: 4px;
+	}	
 	
 	.acf-field-setting-standard_buttons .acf-checkbox-list.acf-hl li {
 		width: 60px;
