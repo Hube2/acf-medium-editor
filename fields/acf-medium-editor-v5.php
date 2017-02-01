@@ -355,6 +355,16 @@
 					'name'			=> 'other_options'
 				);
 				acf_render_field_setting($field, $args, false);
+				
+				// delay
+				$args = array(
+					'label'			=> __('Delay initialization?', 'acf-medium-editor'),
+					'instructions'	=> __('Medium Editor will not be initalized until field is clicked', 'acf-medium-editor'),
+					'name'			=> 'delay',
+					'type'			=> 'true_false',
+					'ui'			=> 1,
+				);
+				acf_render_field_setting($field, $args);
 		
 			}
 			
@@ -491,14 +501,18 @@
 						$options[$option] = false;
 					}
 				}
-				
+				$delay = 0;
+				if (isset($field['delay'])) {
+					$delay = intval($field['delay']);
+				}
 				?>
 					<div class="acf-medium-editor-field-data" style="display:none;" data-key="medium_editor_<?php 
 						echo $field['key']; ?>" data-buttons="<?php 
 						echo str_replace('+', '%20', urlencode(json_encode($dash_buttons))); ?>" data-extensions="<?php 
 						echo str_replace('+', '%20', urlencode(json_encode($extensions))); ?>" data-placeholder="<?php 
 						echo $field['placeholder']; ?>" data-options="<?php 
-						echo str_replace('+', '%20', urlencode(json_encode($options))); ?>"></div>
+						echo str_replace('+', '%20', urlencode(json_encode($options))); ?>" data-delay="<?php 
+						echo $delay; ?>"></div>
 				<?php 
 			}
 			

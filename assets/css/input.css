@@ -52,7 +52,15 @@
 	}
 	.medium-editor-element > p:last-child {
 		margin-bottom: 4px;
-	}	
+	}
+	
+	.medium-editor-delay-init {
+		display: inline-block;
+		padding:  4px 8px;
+		background-color: #ddd;
+		font-weight: normal;
+		margin-left: 2em;
+	}
 	
 	.acf-field-setting-standard_buttons .acf-checkbox-list.acf-hl li {
 		width: 60px;

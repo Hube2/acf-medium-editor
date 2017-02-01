@@ -46,6 +46,7 @@ var acf_medium_editor_timeout = false;
 	}
 	
 	function initialize_acf_medium_editor_field($el) {
+		console.log($el);
 		var $textarea = $el.find('textarea').first();
 		var $selector = 'textarea'
 		$selector = acf_get_medium_editor_selector($textarea, $selector);
@@ -57,6 +58,19 @@ var acf_medium_editor_timeout = false;
 		var $uniqid = acf.get_uniqid();
 		var $data = $el.find('div[data-key="medium_editor_'+$key+'"]').first();
 		
+		var $delay = $data.data('delay');
+		if ($delay == 1 && !$textarea.hasClass('focused')) {
+			// dealy init
+			$el.find('.acf-label label').append('<span class="medium-editor-delay-init">Click to Initialize MediumEditor</span>');
+			$textarea.focus(function(e) {
+				$textarea.addClass('focused');
+				$el = $(e.target).closest('.acf-field');
+				$el.find('.acf-label label span.medium-editor-delay-init').remove();
+				initialize_acf_medium_editor_field($el);
+			});
+			return;
+		}
+		
 		var $container;
 		var $static = false;
 		var $align = 'left';
@@ -66,7 +80,8 @@ var acf_medium_editor_timeout = false;
 			$container = null;
 		} else {
 			$data.closest('.acf-input').prepend('<div id="medium-editor-container-'+$uniqid+'"></div>');
-			$container = document.getElementById('medium-editor-container-'+$uniqid);		}
+			$container = document.getElementById('medium-editor-container-'+$uniqid);
+		}
 		var $buttons = decodeURIComponent($data.data('buttons'));
 		var $buttons = JSON.parse(decodeURIComponent($data.data('buttons')));
 		var $extensions = JSON.parse(decodeURIComponent($data.data('extensions')));

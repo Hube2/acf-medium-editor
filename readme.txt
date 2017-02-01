@@ -205,9 +205,10 @@ add_filter('acf/medium-editor-field/buttons', 'my_buttons', 10, 2);
 
 == Changelog ==
 
-= 2.2.3 =
+= 2.3.0 =
 * corrected bug - in_array() error on line 725
 * css change, fix, work-around for jumpy editor behaviour
+* added delay initialization setting
 
 = 2.2.2 =
 * fixed jumpy behavior of editer/toolbar - thanks @Hrohh
