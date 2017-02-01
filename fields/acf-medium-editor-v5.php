@@ -722,7 +722,7 @@
 				$value = preg_replace('#<(\w+)\s*[^>]*>\s*(<br\s*/?>)?\s*</\1>#s', '', $value);
 				$value = preg_replace('#(^<br\s*/?>|<br\s*/?>$)#s', '', $value);
 				if (isset($field['other_options'])) {
-					if (in_array('disableReturn', $field['other_options'])) {
+					if (is_array($field['other_options']) && in_array('disableReturn', $field['other_options'])) {
 						// no return, remove all p tags
 						$value = preg_replace('#</?p[^>]*>#is', ' ', $value);
 						if (!in_array('allowBreakInSingleLineInput', $field['other_options'])) {
