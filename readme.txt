@@ -1,5 +1,5 @@
 === ACF Medium Editor Field ===
-Contributors: Hube2, tmconnect
+Contributors: Hube2
 Tags: acf, add on, inline wysywig, medium editor, configurable
 Requires at least: 4.0.0
 Tested up to: 4.7.0
