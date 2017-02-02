@@ -205,6 +205,9 @@ add_filter('acf/medium-editor-field/buttons', 'my_buttons', 10, 2);
 
 == Changelog ==
 
+= 2.3.1 =
+* corrected button style to allow wider buttons for custom buttons
+
 = 2.3.0 =
 * corrected bug - in_array() error on line 725
 * css change, fix, work-around for jumpy editor behaviour
