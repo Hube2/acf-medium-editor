@@ -46,7 +46,6 @@ var acf_medium_editor_timeout = false;
 	}
 	
 	function initialize_acf_medium_editor_field($el) {
-		console.log($el);
 		var $textarea = $el.find('textarea').first();
 		var $selector = 'textarea'
 		$selector = acf_get_medium_editor_selector($textarea, $selector);
@@ -82,6 +81,10 @@ var acf_medium_editor_timeout = false;
 			$data.closest('.acf-input').prepend('<div id="medium-editor-container-'+$uniqid+'"></div>');
 			$container = document.getElementById('medium-editor-container-'+$uniqid);
 		}
+		
+		$static = false;
+		$container = null;
+		
 		var $buttons = decodeURIComponent($data.data('buttons'));
 		var $buttons = JSON.parse(decodeURIComponent($data.data('buttons')));
 		var $extensions = JSON.parse(decodeURIComponent($data.data('extensions')));
