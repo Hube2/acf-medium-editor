@@ -140,6 +140,10 @@
 						'name' => 'h6',
 						'contentDefault' => '<b title="'.__('Heading type 6', 'acf-medium-editor').'">H6</b>'
 					),
+					'html' => array(
+						'name' => 'html',
+						'contentDefault' => '<b title="'.__('HTML', 'acf-medium-editor').'"><i class="dashicons dashicons-editor-code"></i></b>'
+					),
 					'removeFormat' => array(
 						'name' => 'removeFormat',
 						'contentDefault' => '<b title="'.__('Clear formating', 'acf-medium-editor').'"><i class="dashicons dashicons-editor-removeformatting"></i></b>'
@@ -533,7 +537,7 @@
 				wp_register_script('medium-editor', $url.'assets/vendor/medium-editor/js/medium-editor'.$min.'.js', array(), $version);
 				wp_enqueue_script('medium-editor');
 				
-				wp_register_script('medium-button', $url.'assets/vendor/medium-button/src/MediumButton'.$min.'.js', array('medium-editor'), $version);
+				wp_register_script('medium-button', $url.'assets/vendor/medium-button/src/medium-button'.$min.'.js', array('medium-editor'), $version);
 				wp_enqueue_script('medium-button');
 				
 				wp_register_style('medium-editor', $url.'assets/vendor/medium-editor/css/medium-editor'.$min.'.css', array(), $version);
