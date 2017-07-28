@@ -544,6 +544,9 @@ MediumEditor.extensions = {};
             Util.moveTextRangeIntoElement(textNodes[0], textNodes[textNodes.length - 1], anchor);
             anchor.setAttribute('href', href);
             if (target) {
+                if (target === '_blank') {
+                    anchor.setAttribute('rel', 'noopener noreferrer');
+                }
                 anchor.setAttribute('target', target);
             }
             return anchor;
@@ -989,12 +992,14 @@ MediumEditor.extensions = {};
             var i, url = anchorUrl || false;
             if (el.nodeName.toLowerCase() === 'a') {
                 el.target = '_blank';
+                el.rel = 'noopener noreferrer';
             } else {
                 el = el.getElementsByTagName('a');
 
                 for (i = 0; i < el.length; i += 1) {
                     if (false === url || url === el[i].attributes.href.value) {
                         el[i].target = '_blank';
+                        el[i].rel = 'noopener noreferrer';
                     }
                 }
             }
@@ -1008,12 +1013,14 @@ MediumEditor.extensions = {};
             var i;
             if (el.nodeName.toLowerCase() === 'a') {
                 el.removeAttribute('target');
+                el.removeAttribute('rel');
             } else {
                 el = el.getElementsByTagName('a');
 
                 for (i = 0; i < el.length; i += 1) {
                     if (anchorUrl === el[i].attributes.href.value) {
                         el[i].removeAttribute('target');
+                        el[i].removeAttribute('rel');
                     }
                 }
             }
@@ -3764,8 +3771,8 @@ MediumEditor.extensions = {};
                 // figure out how to deprecate? also consider `fa-` icon default implcations.
                 template.push(
                     '<div class="medium-editor-toolbar-form-row">',
-                    '<input type="checkbox" class="medium-editor-toolbar-anchor-target">',
-                    '<label>',
+                    '<input type="checkbox" class="medium-editor-toolbar-anchor-target" id="medium-editor-toolbar-anchor-target-field-' + this.getEditorId() + '">',
+                    '<label for="medium-editor-toolbar-anchor-target-field-' + this.getEditorId() + '">',
                     this.targetCheckboxText,
                     '</label>',
                     '</div>'
@@ -7869,7 +7876,7 @@ MediumEditor.parseVersionString = function (release) {
 
 MediumEditor.version = MediumEditor.parseVersionString.call(this, ({
     // grunt-bump looks for this:
-    'version': '5.23.0'
+    'version': '5.23.1'
 }).version);
 
     return MediumEditor;
