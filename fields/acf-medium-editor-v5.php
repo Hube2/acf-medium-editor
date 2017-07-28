@@ -142,7 +142,7 @@
 					),
 					'html' => array(
 						'name' => 'html',
-						'contentDefault' => '<b title="'.__('HTML', 'acf-medium-editor').'"><i class="dashicons dashicons-editor-code"></i></b>'
+						'contentDefault' => '<b title="'.__('HTML', 'acf-medium-editor').'"><i class="dashicons dashicons-arrow-right" style="position: absolute; color: #7f8b99;"></i><i class="dashicons dashicons-editor-code"></i></b>'
 					),
 					'removeFormat' => array(
 						'name' => 'removeFormat',
