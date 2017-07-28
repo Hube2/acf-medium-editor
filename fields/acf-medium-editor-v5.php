@@ -742,7 +742,7 @@
 				if (isset($field['other_options'])) {
 					if (is_array($field['other_options']) && in_array('disableReturn', $field['other_options'])) {
 						// no return, remove all p tags
-						$value = preg_replace('#</?p[^>]*>#is', ' ', $value);
+						$value = preg_replace('#</?p\s+[^>]*>#is', ' ', $value);
 						if (!in_array('allowBreakInSingleLineInput', $field['other_options'])) {
 							// remove all br tags
 							$value = preg_replace('#<br[^>]*>#is', ' ', $value);

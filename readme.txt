@@ -205,6 +205,9 @@ add_filter('acf/medium-editor-field/buttons', 'my_buttons', 10, 2);
 
 == Changelog ==
 
+= 2.4.2 =
+* corrected bug <pre> tags being stripped from saved value
+
 = 2.4.1 =
 * updated Medium Editor to 5.23.1
 
