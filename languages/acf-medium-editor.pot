@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ACF Medium Editor\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2017-01-20 21:45-0500\n"
+"POT-Creation-Date: 2017-12-18 09:32-0500\n"
 "PO-Revision-Date: \n"
 "Last-Translator: John Huebner <johnhuebner@site-seeker.com>\n"
 "Language-Team: \n"
@@ -124,63 +124,67 @@ msgid "Heading type 6"
 msgstr ""
 
 #: fields/acf-medium-editor-v5.php:145
+msgid "HTML"
+msgstr ""
+
+#: fields/acf-medium-editor-v5.php:149
 msgid "Clear formating"
 msgstr ""
 
-#: fields/acf-medium-editor-v5.php:247
+#: fields/acf-medium-editor-v5.php:251
 msgid "Default Value"
 msgstr ""
 
-#: fields/acf-medium-editor-v5.php:248
+#: fields/acf-medium-editor-v5.php:252
 msgid "Appears when creating a new post"
 msgstr ""
 
-#: fields/acf-medium-editor-v5.php:255
+#: fields/acf-medium-editor-v5.php:259
 msgid "Placeholder Text"
 msgstr ""
 
-#: fields/acf-medium-editor-v5.php:256
+#: fields/acf-medium-editor-v5.php:260
 msgid "Appears within the input"
 msgstr ""
 
-#: fields/acf-medium-editor-v5.php:268
+#: fields/acf-medium-editor-v5.php:272
 msgid "Buttons"
 msgstr ""
 
-#: fields/acf-medium-editor-v5.php:270
+#: fields/acf-medium-editor-v5.php:274
 msgid "Select the standard buttons that you want to include for medium-editor."
 msgstr ""
 
-#: fields/acf-medium-editor-v5.php:280
+#: fields/acf-medium-editor-v5.php:284
 msgid "Custom Buttons"
 msgstr ""
 
-#: fields/acf-medium-editor-v5.php:282
+#: fields/acf-medium-editor-v5.php:286
 msgid ""
 "Create Custom Buttons to be added to Button Bar.<br /><br /><em>(any buttons "
 "with missing values in any fields will be ignored when generating the button "
 "bar.)</em>"
 msgstr ""
 
-#: fields/acf-medium-editor-v5.php:284
+#: fields/acf-medium-editor-v5.php:288
 msgid "Add Button"
 msgstr ""
 
-#: fields/acf-medium-editor-v5.php:290 fields/acf-medium-editor-v5.php:325
+#: fields/acf-medium-editor-v5.php:294 fields/acf-medium-editor-v5.php:329
 msgid "Name"
 msgstr ""
 
-#: fields/acf-medium-editor-v5.php:292
+#: fields/acf-medium-editor-v5.php:296
 msgid ""
 "Each button must have a unique name. Buttons with names that are duplicates "
 "of any other button in this button bar will be ignored."
 msgstr ""
 
-#: fields/acf-medium-editor-v5.php:298
+#: fields/acf-medium-editor-v5.php:302
 msgid "Label"
 msgstr ""
 
-#: fields/acf-medium-editor-v5.php:300
+#: fields/acf-medium-editor-v5.php:304
 msgid ""
 "The Label for the Button that will appear on the button bar. This field can "
 "contain HTML markup. For more information see <a href=\"https://github.com/"
@@ -189,25 +193,25 @@ msgid ""
 "admin pages of your site."
 msgstr ""
 
-#: fields/acf-medium-editor-v5.php:306
+#: fields/acf-medium-editor-v5.php:310
 msgid "HTML Tag"
 msgstr ""
 
-#: fields/acf-medium-editor-v5.php:308
+#: fields/acf-medium-editor-v5.php:312
 msgid ""
 "Enter any valid, non-empty HTML tag type to wrap selected text with. Invalid "
 "tag names will be ignored. See documentaion for allowed HTML tags."
 msgstr ""
 
-#: fields/acf-medium-editor-v5.php:315
+#: fields/acf-medium-editor-v5.php:319
 msgid "Attributes"
 msgstr ""
 
-#: fields/acf-medium-editor-v5.php:318
+#: fields/acf-medium-editor-v5.php:322
 msgid "Add Attribute"
 msgstr ""
 
-#: fields/acf-medium-editor-v5.php:319
+#: fields/acf-medium-editor-v5.php:323
 msgid ""
 "Add attributes to the html tag.<br /><br /><em>(any attributes that do not "
 "have both a name and a value will be ignored. additionally, attribute names "
@@ -215,20 +219,28 @@ msgid ""
 "characters and attribute values must not contain any double quotes.)</em>"
 msgstr ""
 
-#: fields/acf-medium-editor-v5.php:332
+#: fields/acf-medium-editor-v5.php:336
 msgid "Value"
 msgstr ""
 
-#: fields/acf-medium-editor-v5.php:352
+#: fields/acf-medium-editor-v5.php:356
 msgid "Other Medium Editor Options"
 msgstr ""
 
-#: fields/acf-medium-editor-v5.php:353
+#: fields/acf-medium-editor-v5.php:357
 msgid ""
 "Activation of an option will set that option to true. See medium-editor "
 "options."
 msgstr ""
 
-#: fields/acf-medium-editor-v5.php:394
-msgid "select text for formatting options"
+#: fields/acf-medium-editor-v5.php:365
+msgid "Delay initialization?"
+msgstr ""
+
+#: fields/acf-medium-editor-v5.php:366
+msgid "Medium Editor will not be initalized until field is clicked"
+msgstr ""
+
+#: fields/acf-medium-editor-v5.php:408
+msgid "(select text for formatting options)"
 msgstr ""
