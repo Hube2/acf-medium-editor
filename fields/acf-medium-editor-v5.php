@@ -405,7 +405,7 @@
 				
 				$e .= $value;
 				$e .= '</textarea>';
-				$e .= '<span>('.__('select text for formatting options', 'acf-medium-editor').')</span>';
+				$e .= '<span>'.apply_filters('acf-medium-editor/field-instructions', __('(select text for formatting options)', 'acf-medium-editor')).'</span>';
 				
 				echo $e;
 				
