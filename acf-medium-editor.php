@@ -16,9 +16,10 @@
 		exit;
 	}
 	
+	require(plugin_dir_path(__FILE__).'include/options.php');
 	
 	// check if class already exists
-	if (!class_exists('acf_plugin_medium_editor')) :
+	if (!class_exists('acf_plugin_medium_editor')) {
 	
 		class acf_plugin_medium_editor {
 			
@@ -101,8 +102,8 @@
 		new acf_plugin_medium_editor();
 	
 	
-	// class_exists check
-	endif;
+	
+	} // class_exists check
 	
 	if (!function_exists('jh_plugins_list_meta_box')) {
 		function jh_plugins_list_meta_box() {
