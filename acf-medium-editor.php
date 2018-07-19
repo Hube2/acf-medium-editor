@@ -17,6 +17,7 @@
 	}
 	
 	require(plugin_dir_path(__FILE__).'include/options.php');
+	require(plugin_dir_path(__FILE__).'include/custom-buttons.php');
 	
 	// check if class already exists
 	if (!class_exists('acf_plugin_medium_editor')) {
