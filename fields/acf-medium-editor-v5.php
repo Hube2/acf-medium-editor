@@ -290,7 +290,7 @@
 						array(
 							'key' => 'name',
 							'type' => 'text',
-							'required' => 1,
+							'required' => 0,
 							'label' => __('Name', 'acf-medium-editor'),
 							'name' => 'name',
 							'instructions' => __('Each button must have a unique name. Buttons with names that are duplicates of any other button in this button bar will be ignored.', 'acf-medium-editor'),
@@ -298,7 +298,7 @@
 						array(
 							'key' => 'label',
 							'type' => 'text',
-							'required' => 1,
+							'required' => 0,
 							'label' => __('Label', 'acf-medium-editor'),
 							'name' => 'label',
 							'instructions' => __('The Label for the Button that will appear on the button bar. This field can contain HTML markup. For more information see <a href="https://github.com/arcs-/MediumButton" target="_blank">MediumButton</a>. For Font-Awesome or other icon support the icon font set must be installed and included in the admin pages of your site.', 'acf-medium-editor'),
@@ -306,7 +306,7 @@
 						array(
 							'key' => 'tag',
 							'type' => 'text',
-							'required' => 1,
+							'required' => 0,
 							'label' => __('HTML Tag', 'acf-medium-editor'),
 							'name' => 'start',
 							'instructions' => __('Enter any valid, non-empty HTML tag type to wrap selected text with. Invalid tag names will be ignored. See documentaion for allowed HTML tags.', 'acf-medium-editor'),
@@ -315,7 +315,7 @@
 						array(
 							'key' => 'attributes',
 							'type' => 'repeater',
-							'required' => 1,
+							'required' => 0,
 							'label' => __('Attributes', 'acf-medium-editor'),
 							'name' => 'attributes',
 							'layout' => 'row',
@@ -325,14 +325,14 @@
 								array(
 									'key' => 'name',
 									'type' => 'text',
-									'required' => 1,
+									'required' => 0,
 									'label' => __('Name', 'acf-medium-editor'),
 									'name' => 'name'
 								),
 								array(
 									'key' => 'value',
 									'type' => 'text',
-									'required' => 1,
+									'required' => 0,
 									'label' => __('Value', 'acf-medium-editor'),
 									'name' => 'value'
 								),
