@@ -309,7 +309,7 @@
 							'required' => 1,
 							'label' => __('HTML Tag', 'acf-medium-editor'),
 							'name' => 'start',
-							'instructions' => __('Enter any valid, non-empty HTML tag type to wrap selected text with. Invalid tag names will be ignored. See documentaion for allowed HTML tags.', 'acf-medium-editor'),
+							'instructions' => __('Enter any valid, non-empty HTML tag type to wrap selected text with. Invalid tag names will be ignored. See documentation for allowed HTML tags.', 'acf-medium-editor'),
 						),
 						
 						array(
@@ -340,7 +340,7 @@
 						),
 					)
 				);
-				acf_render_field_setting($field, $args, false);
+				//acf_render_field_setting($field, $args, false);
 				
 				$args = array(
 					'choices' => array(
@@ -405,7 +405,7 @@
 				
 				$e .= $value;
 				$e .= '</textarea>';
-				$e .= '<span>'.apply_filters('acf-medium-editor/field-instructions', __('(select text for formatting options)', 'acf-medium-editor')).'</span>';
+				$e .= '<span class="note">'.apply_filters('acf-medium-editor/field-instructions', __('(select text for formatting options)', 'acf-medium-editor')).'</span>';
 				
 				echo $e;
 				
@@ -889,7 +889,7 @@
 			*/
 			
 			function update_field($field) {
-				if (is_array($field['custom_buttons'])) {
+				if (isset($field['custom_buttons']) && is_array($field['custom_buttons'])) {
 					$buttons = array();
 					foreach ($field['custom_buttons'] as $button) {
 						if (is_array($button['attributes'])) {
