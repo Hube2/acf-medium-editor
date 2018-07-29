@@ -311,11 +311,10 @@
 							'name' => 'start',
 							'instructions' => __('Enter any valid, non-empty HTML tag type to wrap selected text with. Invalid tag names will be ignored. See documentation for allowed HTML tags.', 'acf-medium-editor'),
 						),
-						
 						array(
 							'key' => 'attributes',
 							'type' => 'repeater',
-							'required' => 1,
+							'required' => 0,
 							'label' => __('Attributes', 'acf-medium-editor'),
 							'name' => 'attributes',
 							'layout' => 'row',
@@ -325,14 +324,14 @@
 								array(
 									'key' => 'name',
 									'type' => 'text',
-									'required' => 1,
+									'required' => 0,
 									'label' => __('Name', 'acf-medium-editor'),
 									'name' => 'name'
 								),
 								array(
 									'key' => 'value',
 									'type' => 'text',
-									'required' => 1,
+									'required' => 0,
 									'label' => __('Value', 'acf-medium-editor'),
 									'name' => 'value'
 								),
@@ -340,7 +339,7 @@
 						),
 					)
 				);
-				//acf_render_field_setting($field, $args, false);
+				acf_render_field_setting($field, $args, false);
 				
 				$args = array(
 					'choices' => array(
