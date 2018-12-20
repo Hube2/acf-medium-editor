@@ -569,6 +569,16 @@
 				wp_register_script('acf-input-medium-editor', $url.'assets/js/input.js', array('acf-input'), $version);
 				wp_enqueue_script('acf-input-medium-editor');
 				
+				// enqueue custom editor stylesheet(s)
+				$child_dep = array();
+				if (file_exists(get_template_directory().'/medium-editor-style.css')) {
+					wp_enqueue_style('medium-editor-style', get_template_directory_uri().'/medium-editor-style.css');
+					$child_dep[] = 'medium-editor-style';
+				}
+				if (is_child_theme() && file_exists(get_stylesheet_directory().'/medium-editor-style.css')) {
+					wp_enqueue_style('medium-editor-style-child', get_stylesheet_directory_uri().'/medium-editor-style.css', $child_dep);
+				}
+				
 			}
 			
 			
