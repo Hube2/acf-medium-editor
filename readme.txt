@@ -133,6 +133,12 @@ beagle, bootstrap, default, flat, mani, roman, tim
 For more information see [MediumEditor](https://github.com/yabwe/medium-editor#mediumeditor) and
 [MediumButton](https://github.com/arcs-/MediumButton#mediumbutton)
 
+== Custom Editor Styles ==
+
+The styles used in the medium editor for elementa is inherited from WP. If you want to override these styles
+create a file named "medium-editor-syle.css" in your theme folder. If this file exists is will be
+automatcially enqueued on all pages where ACF fields appear.
+
 == Add Custom Buttons in Code ==
 
 This filter is applied to the custom buttons before they are validated as having all the correct
@@ -204,6 +210,10 @@ add_filter('acf/medium-editor-field/buttons', 'my_buttons', 10, 2);
 
 
 == Changelog ==
+
+= 2.5.0 =
+* removed donation nag
+* added enqueing of medium-editor-style.css if it exists in theme
 
 = 2.4.4 =
 * Corrected issues with ACF>=5.7.0
