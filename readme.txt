@@ -214,6 +214,7 @@ add_filter('acf/medium-editor-field/buttons', 'my_buttons', 10, 2);
 = 2.5.0 =
 * removed donation nag
 * added enqueing of medium-editor-style.css if it exists in theme
+* updated Medium Editor to 5.23.3
 
 = 2.4.4 =
 * Corrected issues with ACF>=5.7.0
