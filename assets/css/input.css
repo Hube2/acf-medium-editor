@@ -37,7 +37,7 @@
 	 
 	.medium-editor-toolbar {
 		/* above WP admin menu */
-		z-index: 9999 !important;
+		z-index: 99999 !important;
 	}
 	
 	/* Medium Editor field normalizing bugfix */
