@@ -4,54 +4,9 @@ var acf_medium_editor_timeout = false;
 
 (function($){
 	
-	function acf_get_medium_editor_selector($el, $selector) {
-		// because of repeaters, flex fields and clones
-		// selector needs to be absolutely specific
-		if ($selector != '') {
-			$selector = '>'+$selector.trim();
-		}
-			
-		var $parent = $el.parent();
-		if ($parent.hasClass('acf-clone')) {
-			// do not add editors to any clones
-			// wait until they are active
-			return false;
-		}
-		if ($parent.hasClass('acf-postbox')) {
-			$selector = $parent.prop('nodeName').toLowerCase()+'#'+$parent.attr('id')+$selector;
-			return $selector;
-		}
-		if ($parent.prop('nodeName').toLowerCase() == 'form') {
-			$selector = $parent.prop('nodeName').toLowerCase()+$selector;
-			return $selector;
-		}
-		if (typeof($parent.data('key')) != 'undefined') {
-			$selector = '[data-key="'+$parent.data('key')+'"]'+$selector;
-		}
-		if (typeof($parent.data('id')) != 'undefined') {
-			$selector = '[data-id="'+$parent.data('id')+'"]'+$selector;
-		}
-		if ($parent.hasClass('acf-row')) {
-			$selector = '.acf-row'+$selector;
-		}
-		if (typeof($parent.attr('id')) != 'undefined') {
-			$selector = '#'+$parent.attr('id')+$selector;
-		}
-		$selector = $parent.prop('nodeName').toLowerCase()+$selector;
-		
-		// recurse
-		$selector = acf_get_medium_editor_selector($parent, $selector);
-		
-		return $selector;
-	}
-	
 	function initialize_acf_medium_editor_field($el) {
 		var $textarea = $el.find('textarea').first();
-		var $selector = 'textarea'
-		$selector = acf_get_medium_editor_selector($textarea, $selector);
-		if (!$selector) {
-			return;
-		}
+		var $selector = 'textarea#'+$textarea.attr('id');
 		
 		var $key = $el.data('key');
 		var $uniqid = acf.get_uniqid();
