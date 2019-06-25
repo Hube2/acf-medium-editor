@@ -54,6 +54,18 @@
 		margin-bottom: 4px;
 	}
 	
+	.medium-editor-element ul {
+		list-style-type: disc;
+	}
+	
+	.medium-editor-element ol {
+		list-style-type: decimal;
+	}
+	
+	.medium-editor-element ul, .medium-editor-element ol {
+		margin-left: 2em;
+	}
+	
 	.medium-editor-delay-init {
 		display: inline-block;
 		padding:  4px 8px;
