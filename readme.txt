@@ -2,7 +2,7 @@
 Contributors: Hube2
 Tags: acf, add on, inline wysywig, medium editor, configurable
 Requires at least: 4.0.0
-Tested up to: 5.2
+Tested up to: 5.4
 Stable tag: 2.5.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -28,6 +28,8 @@ For more information on MediumEditor and MediumButton, see the description of th
 For more information see
 [Other Notes](https://wordpress.org/plugins/medium-editor-field-for-acf/other_notes) and
 [Screenshots](https://wordpress.org/plugins/medium-editor-field-for-acf/screenshots)
+
+***Medium Editor needs your help!. This plugin depends [Medium Editor](https://github.com/yabwe/medium-editor) which is the JavaScript package that powers this ACF Add On. I do not maintain this package. This pluig is simply an implementation of it for ACF. [Medium Editor is looking for contributors](https://github.com/yabwe/medium-editor/issues/1503). Without people to help maintain and improve it Medium Editor could fade away and if that happens this plugin will also no longer be possible.***
 
 
 == Screenshots ==

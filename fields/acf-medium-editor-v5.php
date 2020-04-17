@@ -27,6 +27,7 @@
 			*/
 						
 			private $doc_link = '';
+			private $button_types = array();
 			
 			function __construct($settings) {
 				
@@ -240,10 +241,6 @@
 				
 				//add_action('admin_head', array($this, 'admin_head'));
 			} // end function __construct
-			
-			function admin_head() {
-				$screen = get_current_screen(); print_r($screen); die;
-			}
 			
 			function render_field_settings($field) {
 				
