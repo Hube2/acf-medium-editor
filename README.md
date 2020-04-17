@@ -1,3 +1,5 @@
+***Medium Editor needs your help!. This plugin depends Medium Editor which is the JavaScript package that powers this ACF Add On. I do not maintain this package. This pluig is simply an implementation of it for ACF. [Medium Editor is looking for contributors](https://github.com/yabwe/medium-editor/issues/1503). Without people to help maintain and improve it Medium Editor could fade away and if that happens this plugin will no longer be possible.***
+
 # Advanced Custom Fields: Medium Editor Field
 
 Suported ACF Versions
