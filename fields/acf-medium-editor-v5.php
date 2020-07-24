@@ -563,7 +563,11 @@
 				wp_register_style('medium-editor-input', $url.'assets/css/input.css', array('medium-editor-theme'), $version);
 				wp_enqueue_style('medium-editor-input');
 				
-				wp_register_script('acf-input-medium-editor', $url.'assets/js/input.js', array('acf-input'), $version);
+				$src = $url.'assets/js/input.js';
+				// allow override script to be used
+				$src = apply_filters('acf-medium-editor-script-src', $src);
+				
+				wp_register_script('acf-input-medium-editor', $src, array('acf-input'), $version);
 				wp_enqueue_script('acf-input-medium-editor');
 				
 				// enqueue custom editor stylesheet(s)
