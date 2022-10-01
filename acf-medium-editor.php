@@ -4,7 +4,7 @@
 		Plugin Name: ACF Medium Editor Field
 		Plugin URI: https://wordpress.org/plugins/acf-medium-editor-field/
 		Description: Medium Editor Field for ACF 5
-		Version: 2.6.0
+		Version: 2.6.1
 		Author: John A. Huebner II
 		Text Domain: acf-medium-editor
 		Author URI: https://github.com/Hube2
@@ -39,7 +39,7 @@
 				
 				// vars
 				$this->settings = array(
-					'version'	=> '2.6.0',
+					'version'	=> '2.6.1',
 					'url'		=> plugin_dir_url(__FILE__),
 					'path'		=> plugin_dir_path(__FILE__)
 				);
@@ -55,6 +55,35 @@
 				
 				// v4 not supported
 				//add_action('acf/register_fields', 		array($this, 'include_field_types')); // v4
+				
+				add_action('admin_notices', array($this, 'admin_notice'));
+			}
+			
+			function admin_notice() {
+				$screen = get_current_screen();
+				if ($screen->id != 'plugins') {
+					return;
+				}
+				?>
+					<div class="notice notice-error">
+						<p>
+							<strong>IMPORTANT NOTICE FOR ACF MEDIUM EDITOR FIELD USERS</strong><br />
+							The ACF Medium Editor Field is not compatible with ACF Version 6<br />
+							I am currently working on making this plugin compatible with ACF 6.<br />
+							If you have already updated to ACF V6 you will need to revert to ACF V5 to continue using
+							Medium Editor fields until an update to this plugin for V6 is available.<br/>
+						</p>
+						<p>
+							In addition to the this when an update for ACF6 is available it will no longer support custom buttons
+							in the editor. Custom buttons will only be supported using the acf/medium-editor-field/custom-buttons
+							filter hook as described in the documentation.
+						</p>
+						<p>
+							If you have any questions or need help please use the
+							<a href="https://wordpress.org/support/plugin/acf-medium-editor-field/" target="_blank">support forum</a>.
+						</p>
+					</div>
+				<?php 
 			}
 			
 			
