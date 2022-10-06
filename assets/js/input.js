@@ -39,7 +39,7 @@ var acf_medium_editor_timeout = false;
 		
 		$static = false;
 		$container = null;
-		
+
 		var $buttons = decodeURIComponent($data.data('buttons'));
 		var $buttons = JSON.parse(decodeURIComponent($data.data('buttons')));
 		var $extensions = JSON.parse(decodeURIComponent($data.data('extensions')));
@@ -84,7 +84,7 @@ var acf_medium_editor_timeout = false;
 	if(typeof acf.add_action !== 'undefined') {
 		acf.add_action('ready append', function( $el ){
 			acf.get_fields({ type : 'medium_editor'}, $el).each(function(){
-				initialize_acf_medium_editor_field($(this));
+				if (!$(this).hasClass("acf-field-tab")) initialize_acf_medium_editor_field($(this));
 			});
 		});
 	} else {
