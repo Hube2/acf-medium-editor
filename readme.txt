@@ -3,7 +3,7 @@ Contributors: Hube2
 Tags: acf, add on, inline wysywig, medium editor, configurable
 Requires at least: 4.0.0
 Tested up to: 6.0
-Stable tag: 2.6.1
+Stable tag: 3.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -14,8 +14,9 @@ Medium Editor Field for ACF
 = Compatibility =
 This ACF field type is compatible with:
 * ACF 5
+* ACF 6
 
-***This is an add on plugin for Advanced Custom Fields (ACF) 5. This plugin also requires either ACF Pro or the repeater field add on for ACF. This plugin will not work if ACF5 is not installed and active or if the ACF repeater field is not available. This plugin may work in a limited capacity if the repeater field is not avilable.***
+***This is an add on plugin for Advanced Custom Fields (ACF) 5 or 6. This plugin will not work if ACF is not installed and active. This plugin may work in a limited capacity if the repeater field is not avilable.***
 
 Ever needed to give a client a way to edit the appearence of text without wanting to give them a full blown WYSIWYG editor? Need something less than a WYSYWIG but more than a text or textarea field that you can configure the way you need it to work with the features you need it to have?
 
@@ -212,6 +213,11 @@ add_filter('acf/medium-editor-field/buttons', 'my_buttons', 10, 2);
 
 
 == Changelog ==
+
+= 3.0.0 =
+* ACF >= V6, prevent initialization of medium editor scripts on ACF Field Group editor
+* Removed custom button settings from field editor, not supported by ACF6. Adding custom buttons is now only available through the filter hook "acf/medium-editor-field/custom-buttons"
+* removed ACF V6 Notice
 
 = 2.6.1 =
 * added ACF V6 Notice

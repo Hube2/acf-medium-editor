@@ -143,7 +143,7 @@
 					),
 					'html' => array(
 						'name' => 'html',
-						'contentDefault' => '<b title="'.__('HTML', 'acf-medium-editor').'"><i class="dashicons dashicons-arrow-right" style="position: absolute; color: #7f8b99;"></i><i class="dashicons dashicons-editor-code"></i></b>'
+						'contentDefault' => '<b title="'.__('HTML', 'acf-medium-editor').'"><i class="dashicons dashicons-editor-code"></i></b>'
 					),
 					'removeFormat' => array(
 						'name' => 'removeFormat',
@@ -276,68 +276,72 @@
 				);
 				acf_render_field_setting($field, $args, false);
 				
-				$args = array(
-					'type' => 'repeater',
-					'label' => __('Custom Buttons', 'acf-medium-editor'),
-					'name' => 'custom_buttons',
-					'instructions' => __('Create Custom Buttons to be added to Button Bar.<br /><br /><em>(any buttons with missing values in any fields will be ignored when generating the button bar.)</em>', 'acf-medium-editor'),
-					'layout' => 'block',
-					'button_label' => __('Add Button', 'acf-medium-editor'),
-					'sub_fields' => array(
-						array(
-							'key' => 'name',
-							'type' => 'text',
-							'required' => 0,
-							'label' => __('Name', 'acf-medium-editor'),
-							'name' => 'name',
-							'instructions' => __('Each button must have a unique name. Buttons with names that are duplicates of any other button in this button bar will be ignored.', 'acf-medium-editor'),
-						),
-						array(
-							'key' => 'label',
-							'type' => 'text',
-							'required' => 0,
-							'label' => __('Label', 'acf-medium-editor'),
-							'name' => 'label',
-							'instructions' => __('The Label for the Button that will appear on the button bar. This field can contain HTML markup. For more information see <a href="https://github.com/arcs-/MediumButton" target="_blank">MediumButton</a>. For Font-Awesome or other icon support the icon font set must be installed and included in the admin pages of your site.', 'acf-medium-editor'),
-						),
-						array(
-							'key' => 'tag',
-							'type' => 'text',
-							'required' => 0,
-							'label' => __('HTML Tag', 'acf-medium-editor'),
-							'name' => 'start',
-							'instructions' => __('Enter any valid, non-empty HTML tag type to wrap selected text with. Invalid tag names will be ignored. See documentaion for allowed HTML tags.', 'acf-medium-editor'),
-						),
-						
-						array(
-							'key' => 'attributes',
-							'type' => 'repeater',
-							'required' => 0,
-							'label' => __('Attributes', 'acf-medium-editor'),
-							'name' => 'attributes',
-							'layout' => 'row',
-							'button_label' => __('Add Attribute', 'acf-medium-editor'),
-							'instructions' => __('Add attributes to the html tag.<br /><br /><em>(any attributes that do not have both a name and a value will be ignored. additionally, attribute names must start with a letter and contain only letters, numbers or dash characters and attribute values must not contain any double quotes.)</em>', 'acf-medium-editor'),
-							'sub_fields' => array(
-								array(
-									'key' => 'name',
-									'type' => 'text',
-									'required' => 0,
-									'label' => __('Name', 'acf-medium-editor'),
-									'name' => 'name'
-								),
-								array(
-									'key' => 'value',
-									'type' => 'text',
-									'required' => 0,
-									'label' => __('Value', 'acf-medium-editor'),
-									'name' => 'value'
-								),
-							)
-						),
-					)
-				);
-				acf_render_field_setting($field, $args, false);
+				// custom buttons
+				$acf_version = acf_get_setting('version');
+				if (version_compare($acf_version, '6.0.0', '<'))  {
+					$args = array(
+						'type' => 'repeater',
+						'label' => __('Custom Buttons', 'acf-medium-editor'),
+						'name' => 'custom_buttons',
+						'instructions' => __('Create Custom Buttons to be added to Button Bar.<br /><br /><em>(any buttons with missing values in any fields will be ignored when generating the button bar.)</em>', 'acf-medium-editor'),
+						'layout' => 'block',
+						'button_label' => __('Add Button', 'acf-medium-editor'),
+						'sub_fields' => array(
+							array(
+								'key' => 'name',
+								'type' => 'text',
+								'required' => 0,
+								'label' => __('Name', 'acf-medium-editor'),
+								'name' => 'name',
+								'instructions' => __('Each button must have a unique name. Buttons with names that are duplicates of any other button in this button bar will be ignored.', 'acf-medium-editor'),
+							),
+							array(
+								'key' => 'label',
+								'type' => 'text',
+								'required' => 0,
+								'label' => __('Label', 'acf-medium-editor'),
+								'name' => 'label',
+								'instructions' => __('The Label for the Button that will appear on the button bar. This field can contain HTML markup. For more information see <a href="https://github.com/arcs-/MediumButton" target="_blank">MediumButton</a>. For Font-Awesome or other icon support the icon font set must be installed and included in the admin pages of your site.', 'acf-medium-editor'),
+							),
+							array(
+								'key' => 'tag',
+								'type' => 'text',
+								'required' => 0,
+								'label' => __('HTML Tag', 'acf-medium-editor'),
+								'name' => 'start',
+								'instructions' => __('Enter any valid, non-empty HTML tag type to wrap selected text with. Invalid tag names will be ignored. See documentaion for allowed HTML tags.', 'acf-medium-editor'),
+							),
+							
+							array(
+								'key' => 'attributes',
+								'type' => 'repeater',
+								'required' => 0,
+								'label' => __('Attributes', 'acf-medium-editor'),
+								'name' => 'attributes',
+								'layout' => 'row',
+								'button_label' => __('Add Attribute', 'acf-medium-editor'),
+								'instructions' => __('Add attributes to the html tag.<br /><br /><em>(any attributes that do not have both a name and a value will be ignored. additionally, attribute names must start with a letter and contain only letters, numbers or dash characters and attribute values must not contain any double quotes.)</em>', 'acf-medium-editor'),
+								'sub_fields' => array(
+									array(
+										'key' => 'name',
+										'type' => 'text',
+										'required' => 0,
+										'label' => __('Name', 'acf-medium-editor'),
+										'name' => 'name'
+									),
+									array(
+										'key' => 'value',
+										'type' => 'text',
+										'required' => 0,
+										'label' => __('Value', 'acf-medium-editor'),
+										'name' => 'value'
+									),
+								)
+							),
+						)
+					);
+					acf_render_field_setting($field, $args, false);
+				}
 				
 				$args = array(
 					'choices' => array(
@@ -405,8 +409,10 @@
 				$e .= '<span class="note">'.apply_filters('acf-medium-editor/field-instructions', __('(select text for formatting options)', 'acf-medium-editor')).'</span>';
 				
 				echo $e;
-				
-				$custom_buttons = $field['custom_buttons'];
+				$custom_buttons = array();
+				if (!empty($field['custom_buttons'])) {
+					$custom_buttons = $field['custom_buttons'];
+				}
 				if (empty($custom_buttons)) {
 					$custom_buttons = array();
 				}
@@ -519,6 +525,12 @@
 			
 			function input_admin_enqueue_scripts() {
 				
+				global $post;
+				$load_js = true; // whether or not to load editor initialization script
+				if (is_a($post, 'WP_Post') && $post->post_type == 'acf-field-group') {
+					// do not load on acf field group editor
+					$load_js = false;
+				}
 				// vars
 				$url = $this->settings['url'];
 				$version = $this->settings['version'];
@@ -563,12 +575,14 @@
 				wp_register_style('medium-editor-input', $url.'assets/css/input.css', array('medium-editor-theme'), $version);
 				wp_enqueue_style('medium-editor-input');
 				
-				$src = $url.'assets/js/input.js';
-				// allow override script to be used
-				$src = apply_filters('acf-medium-editor-script-src', $src);
-				
-				wp_register_script('acf-input-medium-editor', $src, array('acf-input'), $version);
-				wp_enqueue_script('acf-input-medium-editor');
+				if ($load_js) {
+					$src = $url.'assets/js/input.js';
+					// allow override script to be used
+					$src = apply_filters('acf-medium-editor-script-src', $src);
+					
+					wp_register_script('acf-input-medium-editor', $src, array('acf-input'), $version);
+					wp_enqueue_script('acf-input-medium-editor');
+				}
 				
 				// enqueue custom editor stylesheet(s)
 				$child_dep = array();
@@ -900,7 +914,7 @@
 			*/
 			
 			function update_field($field) {
-				if (is_array($field['custom_buttons'])) {
+				if (!empty($field['custom_buttons']) && is_array($field['custom_buttons'])) {
 					$buttons = array();
 					foreach ($field['custom_buttons'] as $button) {
 						if (is_array($button['attributes'])) {
@@ -950,5 +964,3 @@
 	
 	// class_exists check
 	endif;
-
-?>

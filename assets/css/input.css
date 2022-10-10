@@ -71,7 +71,7 @@
 		padding:  4px 8px;
 		background-color: #ddd;
 		font-weight: normal;
-		margin-left: 2em;
+		margin-left: .5em;
 	}
 	
 	.acf-field-setting-standard_buttons .acf-checkbox-list.acf-hl li {
@@ -127,6 +127,10 @@
 		position: relative;
 		top: 2px;
 	}
-
+	
+	.post-type-acf-field-group .acf-field-object.acf-field-object-medium-editor .acf-field-setting-standard_buttons ul.acf-hl,
+	.post-type-acf-field-group .acf-field-object.acf-field-object-medium-editor .acf-field-setting-other_options ul.acf-hl {
+		display: block;
+	}
 
 	

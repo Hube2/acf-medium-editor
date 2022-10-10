@@ -14,7 +14,7 @@ var acf_medium_editor_timeout = false;
 		
 		var $delay = $data.data('delay');
 		if ($delay == 1 && !$textarea.hasClass('focused')) {
-			// dealy init
+			// dealay init
 			$el.find('.acf-label label').append('<span class="medium-editor-delay-init">Click to Initialize MediumEditor</span>');
 			$textarea.focus(function(e) {
 				$textarea.addClass('focused');
